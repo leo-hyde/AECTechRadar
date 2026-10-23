@@ -4,7 +4,7 @@ A research map of construction, engineering and architecture (AEC)
 technology firms, built to help advise firms moving from *using some AI* to
 *putting AI at the centre of how they work*. Every fact links to its source.
 
-**Site:** https://leo-hyde.github.io/aec-tech-radar/
+**Site:** https://leo-hyde.github.io/AECTechRadar/
 
 > Early prototype. Entries are AI-researched drafts, not yet checked by a
 > person. Check the sources before relying on anything here.

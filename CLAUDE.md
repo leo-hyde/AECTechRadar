@@ -13,7 +13,7 @@ done: [docs/METHOD.md](docs/METHOD.md). Where we are:
 ## About this project
 - A research map of construction (AEC) technology firms, for Leo's advisory
   work, readable by people (the site) and AI tools (Markdown, JSON, llms.txt).
-  Live at https://leo-hyde.github.io/aec-tech-radar/
+  Live at https://leo-hyde.github.io/AECTechRadar/
 - **This repo is public.** No client names, client notes, or paid-database
   exports. Client-specific work belongs in a private repo.
 

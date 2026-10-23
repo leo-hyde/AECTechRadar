@@ -24,7 +24,7 @@ mark the old one "Replaced by <date>".
   history not in git); one big spreadsheet (no room for analysis text and
   sources).
 
-## 2026-10-23: Public repo, named aec-tech-radar
+## 2026-10-23: Public repo, named AECTechRadar (Leo created it on GitHub)
 - **Why:** Leo wants to share the site with testers; free GitHub Pages needs
   public. Can be made private later.
 - **Consequence:** no client names, notes or paid-data exports here.

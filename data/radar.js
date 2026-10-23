@@ -1,8 +1,8 @@
 // Built by tools/build.py from the .md files: don't edit by hand.
 window.RADAR = {
  "about": "AEC Tech Radar: a research map of construction (AEC) technology firms. Entries marked verification: ai-draft were researched by an AI and not yet checked by a person; check the sources before relying on them.",
- "site": "https://leo-hyde.github.io/aec-tech-radar",
- "repo": "https://github.com/leo-hyde/aec-tech-radar",
+ "site": "https://leo-hyde.github.io/AECTechRadar",
+ "repo": "https://github.com/leo-hyde/AECTechRadar",
  "data_as_of": "2026-10-23",
  "rings": [
   "adopt",

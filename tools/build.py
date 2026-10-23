@@ -23,8 +23,8 @@ import sys
 import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://leo-hyde.github.io/aec-tech-radar"
-REPO = "https://github.com/leo-hyde/aec-tech-radar"
+SITE = "https://leo-hyde.github.io/AECTechRadar"
+REPO = "https://github.com/leo-hyde/AECTechRadar"
 
 # The allowed values. Their meanings are in docs/METHOD.md: change both together.
 RINGS = ["adopt", "trial", "assess", "hold"]

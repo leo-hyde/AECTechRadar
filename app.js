@@ -6,7 +6,7 @@
   "use strict";
   var R = window.RADAR;
   var view = document.getElementById("view");
-  var REPO = R ? R.repo : "https://github.com/leo-hyde/aec-tech-radar";
+  var REPO = R ? R.repo : "https://github.com/leo-hyde/AECTechRadar";
 
   var RING_MEANING = {
     adopt: "Proven at scale: a sensible default for a large firm today.",

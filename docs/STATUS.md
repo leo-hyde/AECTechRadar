@@ -10,8 +10,8 @@ append. History is in `git log`; decisions are in `docs/decisions.md`.
 | | |
 |---|---|
 | Last session | Phone (cloud), 23 Oct 2026, afternoon (started from the playbook repo) |
-| Ended cleanly? | Committed locally; first push waits for Leo to create the empty GitHub repo |
-| Mid-flight work | None in the code. GitHub Pages not switched on yet |
+| Ended cleanly? | Yes, all pushed to `main` of leo-hyde/AECTechRadar |
+| Mid-flight work | None. GitHub Pages needs switching on by Leo (Claude can't from a cloud session) |
 | Next step | Leo reviews entries and rings on the site; marks checked ones |
 | Check first | docs/METHOD.md (how research is done), SPEC.md open questions |
 | Note | Cloud sessions can't fetch most websites directly (403); WebSearch works |
@@ -26,7 +26,7 @@ Markdown files.
 
 ## Next steps
 
-1. Switch on GitHub Pages (Settings → Pages → Deploy from branch `main`, `/`).
+1. Leo: switch on GitHub Pages (Settings → Pages → Deploy from a branch → `main`, `/ (root)`), then check https://leo-hyde.github.io/AECTechRadar/ on phone and desktop.
 2. Leo reviews a few entries against their sources; set `verification: checked`.
 3. Agree the open questions in SPEC.md (regions, who the rings are judged for).
 4. Widen coverage with `/research-firm`, one category per session.
