@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AEC Tech Radar</title>
+  <meta name="description" content="A research map of construction, engineering and architecture technology firms, with sources for every fact.">
+  <!-- For AI tools: a plain index of everything, and all the data in one file -->
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Index for AI tools">
+  <link rel="alternate" type="application/json" href="data/radar.json" title="All the data">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1><a href="#/" style="color:inherit;text-decoration:none">AEC Tech Radar</a></h1>
+      <p class="status-line" id="status-line"></p>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections">
+    <button data-tab="map"><span class="tab-icon" aria-hidden="true">▦</span>Map</button>
+    <button data-tab="companies"><span class="tab-icon" aria-hidden="true">☰</span>Companies</button>
+    <button data-tab="sources"><span class="tab-icon" aria-hidden="true">❝</span>Sources</button>
+    <button data-tab="about"><span class="tab-icon" aria-hidden="true">ⓘ</span>About</button>
+  </nav>
+
+  <main id="view" aria-live="polite"></main>
+
+  <noscript><p>This page needs JavaScript. The research itself is plain text in the
+    <a href="https://github.com/leo-hyde/aec-tech-radar">GitHub repository</a>.</p></noscript>
+
+  <!-- Built by tools/build.py; sets window.RADAR -->
+  <script src="data/radar.js"></script>
+  <!-- Markdown to HTML, and a sanitiser so text can't inject scripts (copies in vendor/) -->
+  <script src="vendor/marked-12.0.2.min.js"></script>
+  <script src="vendor/purify-3.1.6.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

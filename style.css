@@ -1,0 +1,347 @@
+/* Design tokens and components, from the playbook's starter stylesheet
+   (templates/style.css), then this app's own parts at the end. Matches DESIGN.md. */
+
+:root {
+  --bg: #eef1f5;
+  --surface: #ffffff;
+  --surface-2: #f4f6f9;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e3e7ee;
+  --accent: #2563eb;
+  --accent-text: #ffffff;
+  --good: #22c55e;
+  --ok: #fbbf24;
+  --no: #eceff3;  /* calm grey: "no" shouldn't shout */
+  --on-good: #052e14;
+  --on-ok: #3b2a00;
+  --on-no: #5b6472;
+  --danger: #dc2626;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 6px 20px rgba(15, 23, 42, 0.06);
+  --radius: 14px;
+  --radius-sm: 6px;
+  /* Radar rings: each also shows its name, never colour alone */
+  --adopt: #15803d;  --adopt-bg: #dcfce7;
+  --trial: #1d4ed8;  --trial-bg: #dbeafe;
+  --assess: #92400e; --assess-bg: #fef3c7;
+  --hold: #4b5563;   --hold-bg: #e5e7eb;
+}
+
+/* Dark theme: used automatically when the device is in dark mode. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1116;
+    --surface: #171b22;
+    --surface-2: #202631;
+    --text: #e8ecf2;
+    --muted: #98a2b3;
+    --border: #2a313c;
+    --accent: #5b8cff;
+    --accent-text: #0b1020;
+    --good: #2fd36b;
+    --ok: #f5c04a;
+    --no: #222833;
+    --on-no: #a3acb9;
+    --danger: #f87171;
+    --shadow: none;
+    --adopt: #86efac;  --adopt-bg: #12301f;
+    --trial: #93c5fd;  --trial-bg: #172a4d;
+    --assess: #fcd34d; --assess-bg: #3a2e0c;
+    --hold: #cbd5e1;   --hold-bg: #2a313c;
+  }
+}
+
+* { box-sizing: border-box; }
+
+/* Anything marked hidden stays hidden, even if it has its own display style. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 16px 32px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { margin: 0; line-height: 1.2; }
+h1 { font-size: 26px; letter-spacing: -0.02em; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.hint { color: var(--muted); font-size: 14px; }
+.error { color: var(--danger); font-size: 14px; }
+
+/* Rating colours (if the app has good / OK / no) */
+.good { background: var(--good); color: var(--on-good); }
+.ok   { background: var(--ok);   color: var(--on-ok); }
+.no   { background: var(--no);   color: var(--on-no); }
+
+/* ---------- Header and tabs ---------- */
+
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0 12px; }
+.topbar-actions { display: flex; gap: 8px; }
+
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin: 0 0 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.tabs button {
+  flex: 1;
+  min-height: 40px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.tabs button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.tab-icon { display: none; }
+
+/* ---------- Buttons and forms ---------- */
+
+.btn, .icon-btn {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn { padding: 0 18px; }
+.btn.small { min-height: 34px; padding: 0 12px; font-size: 14px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.btn.ghost { border-color: transparent; background: transparent; color: var(--accent); }
+.btn.danger { color: var(--danger); }
+.icon-btn { width: 44px; font-size: 20px; }
+
+input[type="text"], input[type="number"], input[type="search"] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;  /* 16px stops iPhones zooming in */
+}
+input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }  /* rows must wrap on phones */
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Dialogs (bottom sheets on phones) ---------- */
+
+dialog {
+  width: min(480px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+dialog::backdrop { background: rgba(5, 8, 15, 0.5); }
+.dialog-inner { display: flex; flex-direction: column; gap: 16px; padding: 20px; }
+.dialog-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.sticky-actions {  /* keeps Save in reach at the bottom of long dialogs */
+  position: sticky;
+  bottom: -20px;
+  margin: 0 -20px -20px;
+  padding: 12px 20px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- Toast (e.g. "Removed · Undo") ---------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 16px;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: calc(100vw - 32px);
+}
+
+/* ---------- Phone layout (narrower than 600px) ---------- */
+
+@media (max-width: 600px) {
+  body { padding: 0 12px calc(84px + env(safe-area-inset-bottom)); }
+  h1 { font-size: 20px; }
+
+  /* Tabs become an app-style bar fixed to the bottom */
+  .tabs {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+    border: none;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--surface);
+  }
+  .tabs button { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 52px; border-radius: 12px; font-size: 12px; }
+  .tabs button.active { background: var(--surface-2); box-shadow: none; color: var(--accent); }
+  .tab-icon { display: block; font-size: 20px; line-height: 1; }
+
+  /* Dialogs slide up from the bottom, with a grab handle */
+  dialog { width: 100%; max-width: 100%; max-height: 92vh; margin: auto 0 0; border-radius: 18px 18px 0 0; }
+  dialog .dialog-inner::before {
+    content: "";
+    align-self: center;
+    width: 40px;
+    height: 4px;
+    margin: -8px 0 -4px;
+    border-radius: 2px;
+    background: var(--border);
+  }
+  .toast { bottom: calc(80px + env(safe-area-inset-bottom)); }
+}
+
+/* ================= AEC Tech Radar: app-specific parts ================= */
+
+a { color: var(--accent); }
+.status-line { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.draft-banner {
+  font-size: 14px; padding: 10px 12px; margin-bottom: 16px;
+  border-radius: 10px; background: var(--assess-bg); color: var(--text);
+  border: 1px solid var(--border);
+}
+.section-title { margin: 24px 0 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+/* Ring badge: coloured, and always labelled */
+.ring {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: var(--radius-sm);
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.ring.adopt  { color: var(--adopt);  background: var(--adopt-bg); }
+.ring.trial  { color: var(--trial);  background: var(--trial-bg); }
+.ring.assess { color: var(--assess); background: var(--assess-bg); }
+.ring.hold, .ring.none { color: var(--hold); background: var(--hold-bg); }
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: var(--radius-sm);
+  font-size: 12px; background: var(--surface-2); color: var(--muted); border: 1px solid var(--border);
+}
+
+/* Glance card: counts per ring */
+.ring-counts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+.ring-count { padding: 10px; border-radius: 10px; text-align: center; }
+.ring-count b { display: block; font-size: 26px; line-height: 1.1; }
+.ring-count span { font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.ring-count.adopt { background: var(--adopt-bg); color: var(--adopt); }
+.ring-count.trial { background: var(--trial-bg); color: var(--trial); }
+.ring-count.assess { background: var(--assess-bg); color: var(--assess); }
+.ring-count.hold { background: var(--hold-bg); color: var(--hold); }
+
+/* Landscape map: layers, then category cards */
+.layer { margin-bottom: 8px; }
+.layer-head { display: flex; align-items: baseline; gap: 8px; margin: 20px 0 8px; }
+.layer-head h2 { font-size: 16px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.cat-card { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.cat-card h3 a { color: var(--text); text-decoration: none; }
+.cat-card h3 a:hover { text-decoration: underline; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px;
+  padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--text); text-decoration: none; font-size: 14px;
+}
+.chip:hover { border-color: var(--accent); }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex: none; }
+/* Read out by screen readers, not shown */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.dot.adopt { background: var(--adopt); } .dot.trial { background: var(--trial); }
+.dot.assess { background: var(--assess); } .dot.hold, .dot.none { background: var(--hold); }
+.chip.closed { text-decoration: line-through; color: var(--muted); }
+.key { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); margin-top: 12px; }
+.key span { display: inline-flex; align-items: center; gap: 4px; }
+
+/* Company list */
+.filters { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+select {
+  width: 100%; min-height: 44px; padding: 0 8px; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--surface-2); color: var(--text); font: inherit; font-size: 16px;
+}
+.co-card { display: block; color: inherit; text-decoration: none; }
+.co-card:hover { border-color: var(--accent); }
+.co-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.co-card p { margin-top: 6px; font-size: 15px; }
+.co-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+/* Detail pages */
+.back { display: inline-block; margin: 4px 0 12px; font-size: 15px; }
+.detail-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; font-size: 15px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+.view-box { border-left: 4px solid var(--accent); }
+.view-box .hint { margin-top: 6px; }
+.prose { font-size: 16px; line-height: 1.55; overflow-wrap: anywhere; }
+.prose h2 { font-size: 17px; margin: 18px 0 6px; }
+.prose h2:first-child { margin-top: 0; }
+.prose p, .prose ul { margin: 0 0 10px; }
+.prose ul { padding-left: 20px; }
+.source { padding: 10px 0; border-top: 1px solid var(--border); }
+.source:first-of-type { border-top: none; }
+.source a { font-weight: 600; overflow-wrap: anywhere; }
+.source .hint { margin-top: 4px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.actions .btn { display: inline-flex; align-items: center; text-decoration: none; }
+.empty { text-align: center; padding: 24px; }
+
+@media (max-width: 600px) {
+  .filters { grid-template-columns: 1fr 1fr; }
+  .filters .search { grid-column: 1 / -1; }
+  .ring-count b { font-size: 20px; }
+  .facts { grid-template-columns: 1fr; gap: 0; }
+  .facts dd { margin-bottom: 8px; }
+}

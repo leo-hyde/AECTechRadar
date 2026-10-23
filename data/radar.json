@@ -1,0 +1,941 @@
+{
+ "about": "AEC Tech Radar: a research map of construction (AEC) technology firms. Entries marked verification: ai-draft were researched by an AI and not yet checked by a person; check the sources before relying on them.",
+ "site": "https://leo-hyde.github.io/aec-tech-radar",
+ "repo": "https://github.com/leo-hyde/aec-tech-radar",
+ "data_as_of": "2026-10-23",
+ "rings": [
+  "adopt",
+  "trial",
+  "assess",
+  "hold"
+ ],
+ "ai_roles": [
+  "core",
+  "embedded",
+  "enabler"
+ ],
+ "layers": [
+  "foundation",
+  "design",
+  "plan",
+  "build",
+  "operate"
+ ],
+ "categories": [
+  {
+   "name": "Project data platforms",
+   "layer": "foundation",
+   "order": 1,
+   "question": "Where does all project data live, and can AI reach it?",
+   "id": "data-platforms",
+   "body": "The systems of record for drawings, models, RFIs (requests for information),\nsubmittals, costs and site logs. Most large firms already run one or more.\n\n**Why it matters for an AI-native firm:** AI can only reason over data it can\nreach. A firm whose project history sits in clean, connected platforms can\ntrain, search and automate across every project; one whose data sits in email\nand shared drives can't. In 2025–26 the big platforms (Procore, Autodesk,\nBentley, Nemetschek) all added AI assistants and \"agents\" (AI that carries out\nmulti-step tasks) on top of the data they hold, so choosing a platform is now\nalso choosing an AI strategy.\n\n**What to ask a client:** how many systems hold project data, who owns the\ndata contractually, and whether it can be exported in open formats.",
+   "file": "categories/data-platforms.md"
+  },
+  {
+   "name": "Document and contract intelligence",
+   "layer": "foundation",
+   "order": 2,
+   "question": "Can AI read, check and answer questions about the project's documents?",
+   "id": "document-intelligence",
+   "body": "AI that reads drawings, specifications, contracts, RFIs and submittals:\nanswering questions, flagging risky clauses, checking submittals against the\nspec, and spotting changes between drawing revisions.\n\n**Why it matters for an AI-native firm:** construction runs on documents, and\nmost of the knowledge a site team needs is buried in them. This is where large\nlanguage models (the technology behind ChatGPT and Claude) fit most naturally,\nso it is one of the fastest-moving categories. It is also consolidating fast:\nplatforms are building or buying these features (for example Trimble agreeing\nto buy Document Crunch in 2026).\n\n**Watch for:** answers without citations, and who is accountable when an AI\nmisses a clause.",
+   "file": "categories/document-intelligence.md"
+  },
+  {
+   "name": "Design and feasibility automation",
+   "layer": "design",
+   "order": 1,
+   "question": "Can AI generate and test design options faster than people can?",
+   "id": "design-automation",
+   "body": "\"Generative design\" tools: software that produces many layout or massing\noptions from rules and goals (site, unit mix, parking, cost) so people can\ncompare them, plus AI assistants inside design software.\n\n**Why it matters for an AI-native firm:** it moves effort from drawing options\nto choosing between them, and lets a contractor or developer test feasibility\nbefore paying for full design. For design-and-build firms it can connect\ndesign choices to cost and programme early.\n\n**Watch for:** options that look good but ignore local planning rules, and\nhow outputs move into the firm's main design tools (Revit and others).",
+   "file": "categories/design-automation.md"
+  },
+  {
+   "name": "Carbon and sustainability analysis",
+   "layer": "design",
+   "order": 2,
+   "question": "Can the firm measure and cut the carbon in what it designs and builds?",
+   "id": "carbon-sustainability",
+   "body": "Tools for life-cycle assessment (LCA: the environmental impact of a building\nfrom materials to demolition), embodied carbon, environmental product\ndeclarations (EPDs: standard statements of a product's impact) and regulatory\nreporting.\n\n**Why it matters for an AI-native firm:** carbon reporting is increasingly a\nregulatory and client requirement, and it depends on detailed material data,\nwhich is exactly what AI can help gather and keep up to date. Firms that link\ntheir design models to carbon data can compare options on carbon as easily as\non cost.",
+   "file": "categories/carbon-sustainability.md"
+  },
+  {
+   "name": "Preconstruction and estimating",
+   "layer": "plan",
+   "order": 1,
+   "question": "Can AI speed up quantity take-off, estimating and bidding?",
+   "id": "preconstruction-estimating",
+   "body": "\"Take-off\" is measuring quantities (areas, lengths, counts) from drawings to\nprice a job. AI tools now detect and measure rooms, walls and fittings on\ndrawings automatically, and help compare subcontractor bids.\n\n**Why it matters for an AI-native firm:** estimating is repetitive, deadline-\ndriven and decides which jobs a firm wins and whether they make money. Faster\ntake-off means more bids, or more time spent on judgement rather than\nmeasurement.\n\n**Watch for:** accuracy claims are almost always the vendor's own; ask for\ntrials on the firm's own past drawings.",
+   "file": "categories/preconstruction-estimating.md"
+  },
+  {
+   "name": "Planning, scheduling and risk forecasting",
+   "layer": "plan",
+   "order": 2,
+   "question": "Can AI build better programmes and predict delays before they happen?",
+   "id": "planning-scheduling",
+   "body": "Two different approaches: **optimisation** (software that generates and\ncompares many possible construction sequences) and **forecasting** (machine\nlearning trained on thousands of past schedules to predict where a programme\nwill slip).\n\n**Why it matters for an AI-native firm:** delay is the industry's biggest\nmoney-loser. A firm that can test scenarios in hours and price schedule risk\nfrom evidence rather than workshops can bid and manage differently. This is\none of the clearest cases of AI changing a core business decision rather than\njust saving admin time.\n\n**Watch for:** forecasting needs lots of historical schedules; ask whose data\nthe model learned from and whether the firm's own data improves it.",
+   "file": "categories/planning-scheduling.md"
+  },
+  {
+   "name": "Site capture and progress tracking",
+   "layer": "build",
+   "order": 1,
+   "question": "Does the firm know, objectively and weekly, what has actually been built?",
+   "id": "site-capture-progress",
+   "body": "Cameras (often 360° cameras on a helmet), drones and laser scanners capture the\nsite; computer vision (AI that interprets images) maps the images to the plans\nand compares what's built against the model and the programme.\n\n**Why it matters for an AI-native firm:** it turns the site into data. Progress,\nquality and payment discussions can rest on evidence instead of opinion, and\nthe captured history becomes training data for better planning. It is a\nrelatively mature category with many large-contractor deployments.\n\n**Watch for:** the value depends on teams acting on what the system shows, not\njust capturing it.",
+   "file": "categories/site-capture-progress.md"
+  },
+  {
+   "name": "Construction robotics and autonomy",
+   "layer": "build",
+   "order": 2,
+   "question": "Which physical site tasks can machines now do reliably?",
+   "id": "robotics-autonomy",
+   "body": "Robots and autonomy kits for specific, repetitive tasks: marking out layouts\non floors, finishing drywall, driving piles, trenching, drilling. Most are\noffered as \"robots as a service\" (rented per job, with support) rather than\nsold.\n\n**Why it matters for an AI-native firm:** labour shortages and safety. Robots\nare where AI reaches the physical work, but they succeed task by task, not\nas general-purpose site workers, and they need the digital model to be right.\n\n**Watch for:** speed claims are usually from the vendor; ask what the site has\nto look like for the robot to work (clear floors, finished slabs, connectivity).",
+   "file": "categories/robotics-autonomy.md"
+  },
+  {
+   "name": "Industrialised and offsite construction",
+   "layer": "build",
+   "order": 3,
+   "question": "Can building move from the site to the factory, and is it worth it?",
+   "id": "industrialised-construction",
+   "body": "Modular, prefabricated and factory-built components, and the design-for-\nmanufacture approach (designing so parts can be made in a factory) behind\nthem.\n\n**Why it matters for an AI-native firm:** factories generate consistent data\nand repeatable processes, which suit automation far better than one-off sites.\nBut this category has a hard history: several heavily funded firms failed,\nmost visibly Katerra in 2021. Any transformation plan that leans on offsite\nneeds to show it has learned those lessons.",
+   "file": "categories/industrialised-construction.md"
+  },
+  {
+   "name": "Digital twins and operations",
+   "layer": "operate",
+   "order": 1,
+   "question": "Does the asset keep producing useful data after handover?",
+   "id": "digital-twins-operations",
+   "body": "A \"digital twin\" is a model of a building or infrastructure asset that is kept\nup to date with real data (sensors, inspections, maintenance records), so\nowners can monitor, simulate and plan maintenance.\n\n**Why it matters for an AI-native firm:** it extends a contractor's role\nbeyond handover into long-term services, and closes the loop: data on how\nassets actually perform can improve the next design. It is also where the\nbusiness-model change (from one-off projects to ongoing services) is most\nvisible.\n\n**Watch for:** \"digital twin\" is used loosely in marketing; ask what data\nstays live and who keeps it updated.",
+   "file": "categories/digital-twins-operations.md"
+  }
+ ],
+ "companies": [
+  {
+   "name": "ALICE Technologies",
+   "summary": "AI that generates and compares thousands of possible construction schedules for large capital projects.",
+   "website": "https://www.alicetechnologies.com",
+   "hq": "Menlo Park, California, USA",
+   "founded": null,
+   "type": "scale-up",
+   "status": "active",
+   "categories": [
+    "planning-scheduling"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Real deployments with large contractors (Parsons, Kajima named by BuiltWorlds), but the value depends on the client having good schedule and model data. Pilot on one live project before committing.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "ALICE company profile",
+     "publisher": "BuiltWorlds",
+     "url": "https://builtworlds.com/companies/alice-technologies/",
+     "kind": "database",
+     "supports": "Menlo Park base; Stanford research origin; customers including Parsons, HDCC and Kajima; founding year (2015 in text, 2013 in key facts)"
+    },
+    {
+     "title": "AI-based tool optimizes construction schedules straight from P6",
+     "publisher": "ENR",
+     "url": "https://www.enr.com/articles/58169-ai-based-tool-optimizes-construction-schedules-straight-from-p6",
+     "kind": "news",
+     "supports": "works directly from Oracle Primavera P6 schedules, without a full BIM model; founder Rene Morkos"
+    },
+    {
+     "title": "ALICE Optimize product page",
+     "publisher": "ALICE Technologies",
+     "url": "https://www.alicetechnologies.com/alice-optimize",
+     "kind": "company",
+     "supports": "imports and exports Primavera P6, Primavera Cloud and Microsoft Project schedules"
+    },
+    {
+     "title": "Insights Agent product page",
+     "publisher": "ALICE Technologies",
+     "url": "https://www.alicetechnologies.com/construction-schedule-insights-agent",
+     "kind": "company",
+     "supports": "a conversational AI agent for questioning a schedule, citing its sources"
+    }
+   ],
+   "id": "alice-technologies",
+   "body": "## What it does\n\"Generative scheduling\": a planner describes the work, crews and constraints,\nand the software generates many feasible schedules and lets the team compare\nthem (cost, duration, resources). ALICE Pro starts from a BIM model; ALICE\nOptimize works on existing Primavera P6 or Microsoft Project schedules. It\nmarkets heavily to industrial work (data centres, energy, mining) as well as\ncommercial building.\n\n## Why it matters for an AI-native firm\nScheduling is a core decision, not admin. Being able to test \"what if we add a\nsecond crane / change the sequence\" in hours changes how a firm bids and\nrecovers delays. It is one of the clearer examples of AI informing a business\ndecision rather than saving clerical time.\n\n## Evidence and caveats\n- Founding year is inconsistent: BuiltWorlds gives 2015 in its text and 2013\n  in its key-facts box, so it's left blank here.\n- Customer names come from a directory listing; performance claims on the\n  company's pages are its own.\n\n## To check\n- Independent case studies with measured savings.\n- Current funding and ownership (not researched in this pass).",
+   "file": "companies/alice-technologies.md"
+  },
+  {
+   "name": "Autodesk",
+   "summary": "Maker of Revit; its Forma cloud now combines design and construction (the former Autodesk Construction Cloud) with an AI assistant and agents.",
+   "website": "https://www.autodesk.com",
+   "hq": "Not checked yet",
+   "founded": null,
+   "type": "incumbent",
+   "status": "active",
+   "categories": [
+    "data-platforms",
+    "design-automation"
+   ],
+   "ai_role": "embedded",
+   "ring": "adopt",
+   "ring_note": "Most AEC firms already use Autodesk tools, so its AI arrives by default. Treat individual AI features as trial-stage, as several were in beta in 2025–26.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Autodesk Construction Cloud becomes Autodesk Forma",
+     "publisher": "Autodesk",
+     "url": "https://adsknews.autodesk.com/en/news/autodesk-construction-cloud-is-now-autodesk-forma/",
+     "kind": "company",
+     "supports": "Autodesk Construction Cloud is now part of Forma, an industry cloud for design and construction"
+    },
+    {
+     "title": "Meet Autodesk Assistant, AI-native intelligence in Forma",
+     "publisher": "Autodesk",
+     "url": "https://www.autodesk.com/blogs/construction/meet-autodesk-assistant-ai-native-intelligence-in-forma/",
+     "kind": "company",
+     "supports": "Autodesk Assistant answers questions about project records and cites source documents"
+    },
+    {
+     "title": "The future is here, Autodesk reveals a unified Forma for design and build",
+     "publisher": "Geo Week News",
+     "url": "https://www.geoweeknews.com/articles/the-future-is-here-autodesk-reveals-a-unified-forma-for-design-and-build/",
+     "kind": "news",
+     "supports": "AU 2025 announcements (Forma Building Design, Revit as a connected client); Autodesk says AI offers options and people decide"
+    }
+   ],
+   "id": "autodesk",
+   "body": "## What it does\nDesign software (including Revit) plus Forma, a cloud platform that now spans\nearly design (Forma Site Design, Forma Building Design), data management\n(formerly Autodesk Docs) and construction (the former Autodesk Construction\nCloud). Autodesk Assistant and a growing set of AI agents sit across it.\n\n## Why it matters for an AI-native firm\nFor many firms, Autodesk holds the design data that every other AI tool needs.\nHow open that data is (and on what terms) shapes what the firm can build\nitself versus buy from Autodesk.\n\n## Evidence and caveats\n- Most evidence here is Autodesk's own announcements; independent reviews of\n  the AI features weren't gathered in this pass.\n- Headquarters and founding year not checked.",
+   "file": "companies/autodesk.md"
+  },
+  {
+   "name": "Bentley Systems",
+   "summary": "Infrastructure engineering software built around its iTwin digital-twin platform, adding AI design and assistant tools.",
+   "website": "https://www.bentley.com",
+   "hq": "Not checked yet",
+   "founded": null,
+   "type": "incumbent",
+   "status": "active",
+   "categories": [
+    "data-platforms",
+    "digital-twins-operations",
+    "design-automation"
+   ],
+   "ai_role": "embedded",
+   "ring": "adopt",
+   "ring_note": "A default for infrastructure-heavy firms. Newer AI apps (OpenSite+, SYNCHRO+, Copilot) are individually \"trial\".",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Bentley pushes boundaries with infrastructure AI and Cloud Connect",
+     "publisher": "Cadalyst",
+     "url": "https://blog.cadalyst.com/architecture-infrastructure-construction-solutions/bentley-pushes-boundaries-with-infrastructure-ai-and-cloud-connect",
+     "kind": "news",
+     "supports": "Year in Infrastructure 2025 announcements (Infrastructure Cloud Connect, iTwin Engage, SYNCHRO+, AI search in ProjectWise)"
+    },
+    {
+     "title": "Bentley Systems announces generative AI game-changer for civil site design",
+     "publisher": "Bentley Systems",
+     "url": "https://investors.bentley.com/news-releases/news-release-details/bentley-systems-announces-generative-ai-game-changer-civil-site",
+     "kind": "company",
+     "supports": "OpenSite+ uses generative AI for civil site design, built on iTwin"
+    },
+    {
+     "title": "iTwin Platform",
+     "publisher": "Bentley Systems",
+     "url": "https://www.bentley.com/en/products/itwin-platform/",
+     "kind": "company",
+     "supports": "iTwin as the foundation for software to design, build and operate infrastructure assets"
+    }
+   ],
+   "id": "bentley-systems",
+   "body": "## What it does\nEngineering and project-delivery software for infrastructure (products\nnamed in the sources include ProjectWise, SYNCHRO and OpenSite+), with iTwin as a platform for digital twins\nthat combine engineering models, reality data and sensors. AI features include\ngenerative civil site design, 4D sequencing and an assistant.\n\n## Why it matters for an AI-native firm\nFor an infrastructure contractor, the long-term opportunity is operating\nassets, not just building them; digital twins are how that data stays live\nafter handover.\n\n## Evidence and caveats\n- Some AI items date from 2023–24; current status not rechecked.\n- Headquarters and founding year not checked.",
+   "file": "companies/bentley-systems.md"
+  },
+  {
+   "name": "Buildots",
+   "summary": "Helmet-mounted 360° cameras plus computer vision that compare what's built on site against the BIM model and programme.",
+   "website": "https://buildots.com",
+   "hq": "Tel Aviv, Israel",
+   "founded": 2018,
+   "type": "scale-up",
+   "status": "active",
+   "categories": [
+    "site-capture-progress"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Well funded and widely deployed with large contractors; the category is maturing. Trial on one project, and judge it on whether teams act on the data.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Buildots raises $45M to help companies track construction progress",
+     "publisher": "TechCrunch",
+     "url": "https://techcrunch.com/2025/05/29/buildots-raises-45m-to-help-companies-track-construction-progress/",
+     "kind": "news",
+     "supports": "$45m raise in May 2025 to cover more stages of the construction life cycle",
+     "date": "2025-05-29"
+    },
+    {
+     "title": "Israeli AI construction startup Buildots raises $130 million",
+     "publisher": "Ynet News",
+     "url": "https://www.ynetnews.com/business/article/bkvw3ybkfx",
+     "kind": "news",
+     "supports": "founded 2018 by Roy Danon, Aviv Leibovici and Yakir Sudry; a $130m round taking total funding to $297m (date not confirmed in this pass)"
+    },
+    {
+     "title": "Construction Intelligence Platform",
+     "publisher": "Buildots",
+     "url": "https://buildots.com/",
+     "kind": "company",
+     "supports": "captures by 360° camera, drone or laser scan, compared with BIM and schedule"
+    }
+   ],
+   "id": "buildots",
+   "body": "## What it does\nSite teams walk the site with a 360° camera on a helmet (or use drones or\nscans). Computer vision works out what has been installed, element by element,\nand compares it with the BIM model and the programme, producing progress\ntracking and early warning of delays. The company says captures are processed\nwithin 24–36 hours and that it now covers groundworks to fit-out.\n\n## Why it matters for an AI-native firm\nIt turns \"how far along are we?\" from an opinion into data, every week, across\nevery project. That data feeds planning, payments and future forecasting.\n\n## Evidence and caveats\n- Delay-reduction figures (\"up to 50%\") are the company's own.\n- Two funding reports (May 2025 $45m; a later $130m) are both cited; how they\n  relate wasn't confirmed.\n\n## To check\n- Date of the $130m round; independent customer outcomes.",
+   "file": "companies/buildots.md"
+  },
+  {
+   "name": "Built Robotics",
+   "summary": "Autonomy kits that turn excavators into robots, now focused on utility-scale solar piling (RPD 35) and trenching.",
+   "website": "https://www.builtrobotics.com",
+   "hq": "California, USA (city not checked)",
+   "founded": null,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "robotics-autonomy"
+   ],
+   "ai_role": "core",
+   "ring": "assess",
+   "ring_note": "Real deployments (over 2GW of solar, per trade press) but a narrow focus on solar in the US and Australia. Relevant for firms doing solar or large earthworks; otherwise a signal of where site autonomy is heading.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Robotic solar pile driver three times faster than humans",
+     "publisher": "pv magazine USA",
+     "url": "https://pv-magazine-usa.com/2023/04/27/robotic-solar-pile-driver-three-times-faster-than-humans",
+     "kind": "news",
+     "supports": "RPD 35 launch (2023), combining survey, pile distribution, driving and inspection; over 2GW of solar installed with its robots",
+     "date": "2023-04-27"
+    },
+    {
+     "title": "Solar piling",
+     "publisher": "Built Robotics",
+     "url": "https://www.builtrobotics.com/solutions/solar-piling",
+     "kind": "company",
+     "supports": "currently deploying in the US and Australia only; robot-as-a-service model"
+    },
+    {
+     "title": "Built Robotics technology",
+     "publisher": "Built Robotics",
+     "url": "https://www.builtrobotics.com/technology",
+     "kind": "company",
+     "supports": "8-layer safety system; cameras that stop the robot when a person comes near"
+    }
+   ],
+   "id": "built-robotics",
+   "body": "## What it does\nRetrofits standard heavy equipment with sensors and software so it can work\nautonomously. Its RPD 35 robot surveys, distributes and drives piles for solar\nfarms; its Exosystem kit enables autonomous trenching. Rented as a service.\n\n## Why it matters for an AI-native firm\nShows the pattern for site autonomy: narrow, repetitive, well-defined tasks on\nopen sites first. It also partners with the International Union of Operating\nEngineers on training, a model for handling workforce concerns.\n\n## Evidence and caveats\n- Speed claims (up to 5× faster) are the company's. Some company pages are\n  several years old, so current focus should be confirmed.",
+   "file": "companies/built-robotics.md"
+  },
+  {
+   "name": "Canvas",
+   "summary": "A semi-autonomous robot that sprays and sands drywall to a high finish, operated by trained union workers.",
+   "website": "https://www.canvas.build",
+   "hq": "San Francisco, California, USA",
+   "founded": 2017,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "robotics-autonomy"
+   ],
+   "ai_role": "core",
+   "ring": "assess",
+   "ring_note": "Proven on US commercial interiors and backed by Suffolk; Hilti now makes the machines. Relevance depends on the client self-performing finishes.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Canvas raises $24M Series B for drywall finishing robot",
+     "publisher": "The Robot Report",
+     "url": "https://www.therobotreport.com/canvas-24m-series-b-drywalling-robot/",
+     "kind": "news",
+     "supports": "$24m Series B (2021) led by Menlo Ventures with Suffolk Construction; San Francisco"
+    },
+    {
+     "title": "Drywall finishing robot saves time, prevents injuries",
+     "publisher": "Construction Dive",
+     "url": "https://www.constructiondive.com/news/drywall-finishing-robot-saves-time-prevents-injuries/601183/",
+     "kind": "news",
+     "supports": "semi-autonomous system with a human in the loop"
+    },
+    {
+     "title": "Robotics startup Canvas secures $24 million funding",
+     "publisher": "Construction Digital",
+     "url": "https://constructiondigital.com/digital-construction/robotics-startup-canvas-secures-dollar24-million-funding",
+     "kind": "news",
+     "supports": "founded 2017 within Otherlab; cumulative funding about $43m (2021)"
+    },
+    {
+     "title": "Canvas launches the 1200CX",
+     "publisher": "Canvas",
+     "url": "https://canvas.build/canvas-worlds-first-robotic-drywall-finishing-company-launches-the-1200cx/",
+     "kind": "company",
+     "supports": "compact 1200CX robot; Hilti to produce Canvas machines"
+    }
+   ],
+   "id": "canvas",
+   "body": "## What it does\nThe robot maps the room with lidar and 3D sensing, then sprays and sands\njoint compound; people tape and do corners and touch-ups. Canvas works as a\nsubcontractor, training and employing union finishers to run it.\n\n## Why it matters for an AI-native firm\nA good example of robotics changing a trade's business model (a tech company\nacting as subcontractor), not just its tools.\n\n## Evidence and caveats\n- Founded 2017 inside Otherlab (trade press; total funding about $43m as of\n  2021). No later funding news found.\n- Time savings (5–7 days down to about 2) are the company's claims.",
+   "file": "companies/canvas.md"
+  },
+  {
+   "name": "Document Crunch",
+   "summary": "AI that reviews construction contracts for risk and helps site teams follow them; Trimble agreed to buy it in April 2026.",
+   "website": "https://www.documentcrunch.com",
+   "hq": "Atlanta, Georgia, USA",
+   "founded": 2019,
+   "type": "startup",
+   "status": "being-acquired",
+   "categories": [
+    "document-intelligence"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Proven niche (contract risk) with contractor and insurer use. The Trimble deal makes it likely to become part of Trimble's platform, which matters if the client isn't a Trimble user.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Trimble to acquire Document Crunch",
+     "publisher": "Document Crunch",
+     "url": "https://www.documentcrunch.com/news/trimble-to-acquire-document-crunch-to-add-ai-powered-risk-management-and-document-compliance-to-trimble-construction-one-project-delivery-ecosystem",
+     "kind": "company",
+     "supports": "Trimble agreed to acquire it (announced 2 April 2026), expected to close in Q2 2026; terms not disclosed",
+     "date": "2026-04-02"
+    },
+    {
+     "title": "Armed with $21.5 million Series B, Document Crunch is ready to grow",
+     "publisher": "Hypepotamus",
+     "url": "https://hypepotamus.com/news/document-crunch-series-b/",
+     "kind": "news",
+     "supports": "$21.5m Series B (October 2024) led by Titanium Ventures with Nemetschek; moved from Florida to Atlanta in 2021; CEO Josh Levy, a construction lawyer"
+    },
+    {
+     "title": "Document Crunch raises $9 million",
+     "publisher": "Pulse 2.0",
+     "url": "https://pulse2.com/document-crunch-construction-contract-intelligence-company-raises-9-million/",
+     "kind": "news",
+     "supports": "$9m Series A (February 2024) led by Navitas Capital"
+    }
+   ],
+   "id": "document-crunch",
+   "body": "## What it does\nReads construction contracts and flags risky or unusual clauses (payment,\nindemnity, notice periods), then helps project teams find and follow the\nobligations during the job. It has added conversational AI and a Microsoft\nWord add-in.\n\n## Why it matters for an AI-native firm\nContract risk is where small misses cost a lot. AI that reads every contract\nthe same way, every time, and puts obligations in front of site teams is a\nclear case of AI reducing commercial risk.\n\n## Evidence and caveats\n- Founding year (2019) is from a directory listing only.\n- Whether the Trimble acquisition has closed wasn't confirmed in this pass.\n\n## To check\n- Acquisition status, and whether it stays available outside Trimble's products.",
+   "file": "companies/document-crunch.md"
+  },
+  {
+   "name": "Dusty Robotics",
+   "summary": "A mobile robot (FieldPrinter) that prints the BIM layout directly onto the floor of a building site.",
+   "website": "https://www.dustyrobotics.com",
+   "hq": "Not checked yet",
+   "founded": 2018,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "robotics-autonomy"
+   ],
+   "ai_role": "enabler",
+   "ring": "trial",
+   "ring_note": "One of the most practical site robots, with case studies from Turner, Skanska and Mortenson (company-published). Easy to trial on a fit-out-heavy project.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Dusty Robotics to use $45M in Series B funding to scale digital floorplan printing",
+     "publisher": "For Construction Pros",
+     "url": "https://www.forconstructionpros.com/home/article/22908766/dusty-robotics-to-use-45m-in-series-b-funding-to-scale-digital-floorplan-printing",
+     "kind": "news",
+     "supports": "$45m Series B (May 2022) led by Scale Venture Partners; total $68.7m"
+    },
+    {
+     "title": "Dusty Robotics raises $5M in seed funding",
+     "publisher": "Construction Specifier",
+     "url": "https://www.constructionspecifier.com/dusty-robotics-raises-5m-in-seed-funding/",
+     "kind": "news",
+     "supports": "founded 2018 by Tessa Lau and Philipp Herget"
+    },
+    {
+     "title": "Dusty Robotics press",
+     "publisher": "Dusty Robotics",
+     "url": "https://www.dustyrobotics.com/press",
+     "kind": "company",
+     "supports": "FieldPrinter 2 and FieldPrint platform generally available (October 2024)"
+    }
+   ],
+   "id": "dusty-robotics",
+   "body": "## What it does\nInstead of crews measuring and chalking lines, the robot reads the BIM model\nand prints the layout (walls, openings, services) on the slab, to a stated\n1/16-inch accuracy. Offered as a service priced by project size.\n\n## Why it matters for an AI-native firm\nIt's a direct bridge from the digital model to the physical site: if the model\nis right, the layout is right. That rewards firms whose models are accurate,\nwhich is part of the AI-native story.\n\n## Evidence and caveats\n- Customer results (e.g. Skanska: 50% faster layout) are company case studies.\n- No funding news after 2022 found; current funding not checked.",
+   "file": "companies/dusty-robotics.md"
+  },
+  {
+   "name": "Katerra",
+   "summary": "A SoftBank-backed attempt to vertically integrate design, manufacturing and construction; went bankrupt in 2021. Kept here as a lesson.",
+   "website": null,
+   "hq": "USA (city not checked)",
+   "founded": null,
+   "type": "scale-up",
+   "status": "closed",
+   "categories": [
+    "industrialised-construction"
+   ],
+   "ai_role": "enabler",
+   "ring": null,
+   "ring_note": "Not a vendor. Included because any \"transform the whole business model\" plan will be compared with Katerra; know why it failed.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Katerra files for bankruptcy, seeks to reorganize US operations",
+     "publisher": "ENR",
+     "url": "https://enr.com/articles/51869-katerra-files-for-bankruptcy-seeks-to-reorganize-us-operations",
+     "kind": "news",
+     "supports": "2021 bankruptcy filing"
+    },
+    {
+     "title": "What does Katerra's demise mean for the contech and modular industries?",
+     "publisher": "Construction Dive",
+     "url": "https://www.constructiondive.com/news/what-does-katerras-demise-mean-for-the-contech-and-modular-industries/608037/",
+     "kind": "analysis",
+     "supports": "industry reaction and lessons"
+    },
+    {
+     "title": "Softbank-backed Katerra's collapse is a failure of pattern-matching",
+     "publisher": "Axios",
+     "url": "https://www.axios.com/2021/06/08/katerra-bankruptcy-softbank",
+     "kind": "analysis",
+     "supports": "argument that a tech-industry playbook was applied to construction"
+    },
+    {
+     "title": "Katerra's $2 billion legacy",
+     "publisher": "Architect Magazine",
+     "url": "https://www.architectmagazine.com/technology/katerras-2-billion-legacy_o",
+     "kind": "analysis",
+     "supports": "overview of what the company tried and spent"
+    }
+   ],
+   "id": "katerra",
+   "body": "## What happened\nKaterra tried to own the whole chain: design, its own factories for building\ncomponents, and construction. It raised very large sums, made many\nacquisitions and took on fixed-price contracts. It filed for bankruptcy in\n2021 after cost overruns and losses; its own filing also blamed the pandemic\nand losing access to construction bonding after its lender (Greensill)\ncollapsed.\n\n## Why it matters for an AI-native firm\nIt is the obvious cautionary tale for any \"transform the whole business\"\nstrategy. Commentators broadly agree on overreach (too many initiatives at\nonce), weak execution and unprofitable project economics; they disagree on how\nmuch the financing shocks were the cause versus the trigger.\n\n## The lesson for advice\nTransform in stages that each pay back; don't buy the whole supply chain\nbefore the core process works; and keep the economics of each project visible.\n(This lesson is the researcher's synthesis, not a quote from the sources.)",
+   "file": "companies/katerra.md"
+  },
+  {
+   "name": "Nemetschek Group",
+   "summary": "AEC software group (products include Archicad and Allplan) adding a shared AI layer and AI assistant across its products.",
+   "website": "https://www.nemetschek.com",
+   "hq": "Not checked yet",
+   "founded": null,
+   "type": "incumbent",
+   "status": "active",
+   "categories": [
+    "data-platforms",
+    "design-automation"
+   ],
+   "ai_role": "embedded",
+   "ring": "trial",
+   "ring_note": "Products are mature; the cross-brand AI layer is new (first agent shown January 2025, availability from autumn 2025). Also an investor in Document Crunch.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Nemetschek to add AI layer to key solutions",
+     "publisher": "AEC Magazine",
+     "url": "https://aecmag.com/ai/nemetschek-to-add-ai-layer-to-key-solutions/",
+     "kind": "news",
+     "supports": "October 2024 plan for an AI layer across major products from 2025"
+    },
+    {
+     "title": "Nemetschek Group unveils AI assistant integration into Allplan and Archicad",
+     "publisher": "PBC Today",
+     "url": "https://www.pbctoday.co.uk/news/digital-construction-news/construction-software-news/nemetschek-group-unveils-ai-assistant-integration-into-allplan-and-archicad/147401/",
+     "kind": "news",
+     "supports": "AI Assistant shown at BAU 2025, the group's first agent-based technology"
+    }
+   ],
+   "id": "nemetschek",
+   "body": "## What it does\nA group of design, engineering and construction software brands, including\nArchicad and Allplan. Since 2024 it has been building one AI layer that all its products\nshare, starting with an AI assistant in Archicad and Allplan.\n\n## Why it matters for an AI-native firm\nFor firms on Archicad or Allplan, this is the AI that will\narrive inside tools they already use; worth comparing with Autodesk's\napproach.\n\n## Evidence and caveats\n- Only Archicad and Allplan are confirmed by the sources here; check the full\n  brand list on Nemetschek's site. Headquarters and founding year not checked.",
+   "file": "companies/nemetschek.md"
+  },
+  {
+   "name": "nPlan",
+   "summary": "Forecasts schedule delay risk with machine learning trained on hundreds of thousands of past project schedules.",
+   "website": "https://www.nplan.io",
+   "hq": "London, UK",
+   "founded": 2017,
+   "type": "scale-up",
+   "status": "active",
+   "categories": [
+    "planning-scheduling"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Used by major contractors and on UK rail work (BAM partnership; Transpennine Route Upgrade case study, both company-published). Strong fit for large programmes; trial on a live project and compare against the firm's usual risk process.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "nPlan Limited",
+     "publisher": "World Economic Forum",
+     "url": "https://www.weforum.org/organizations/nplan-limited/",
+     "kind": "database",
+     "supports": "founded 2017, based in London; forecasts schedule outcomes and delay risk on megaprojects"
+    },
+    {
+     "title": "Construction planning software startup nPlan secures funding from Google Ventures",
+     "publisher": "For Construction Pros",
+     "url": "https://www.forconstructionpros.com/construction-technology/news/21342976/nplan-construction-planning-software-startup-nplan-secures-funding-from-google-ventures",
+     "kind": "news",
+     "supports": "an $18.5m round led by GV (formerly Google Ventures)"
+    },
+    {
+     "title": "BAM joins forces with nPlan on portfolio risk management",
+     "publisher": "nPlan",
+     "url": "https://www.nplan.io/press-releases/bam-joins-forces-with-nplan-to-roll-out-new-approach-to-portfolio-risk-management-powered-by-ai-and-past-project-data",
+     "kind": "company",
+     "supports": "partnership with contractor BAM on AI-based portfolio risk management"
+    },
+    {
+     "title": "Insights Pro product page",
+     "publisher": "nPlan",
+     "url": "https://www.nplan.io/products/insights-pro",
+     "kind": "company",
+     "supports": "risk analysis in hours without quantification workshops; Power BI and Tableau integration"
+    }
+   ],
+   "id": "nplan",
+   "body": "## What it does\nInstead of risk workshops where experts guess how long activities might slip,\nnPlan's models learn from a large archive of historical schedules (the company\ncites more than 750,000) and give a probabilistic forecast for each activity,\nrolled up into a project view of delay risk.\n\n## Why it matters for an AI-native firm\nIt replaces expert opinion with evidence from past projects, which is the\nheart of the \"AI at the centre\" idea: decisions grounded in the firm's (and\nthe industry's) data. It also shows the value of a firm keeping its own\nschedule history.\n\n## Evidence and caveats\n- Funding totals differ between databases (Dealroom about $36.5m, CB Insights\n  about $34.4m), so no total is given here.\n- The schedule-count and speed claims are the company's own.\n\n## To check\n- Whether a client's own schedules improve the model, and who owns that data.",
+   "file": "companies/nplan.md"
+  },
+  {
+   "name": "One Click LCA",
+   "summary": "Life-cycle assessment and embodied-carbon software for buildings, infrastructure and building products.",
+   "website": "https://oneclicklca.com",
+   "hq": "Helsinki, Finland",
+   "founded": 2001,
+   "type": "scale-up",
+   "status": "active",
+   "categories": [
+    "carbon-sustainability"
+   ],
+   "ai_role": "embedded",
+   "ring": "adopt",
+   "ring_note": "A long-established tool for carbon reporting, regularly updated (monthly 2026 releases, including an AI agent for importing bills of materials).",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Finland's One Click LCA secures €40m growth investment",
+     "publisher": "BeBeez",
+     "url": "https://bebeez.eu/2023/11/28/finlands-one-click-lca-secures-e40m-growth-to-accelerate-global-sustainability-solutions-for-construction-and-manufacturing-industries/",
+     "kind": "news",
+     "supports": "€40m from PSG Equity and InfraVia Capital Partners (November 2023)",
+     "date": "2023-11-28"
+    },
+    {
+     "title": "One Click LCA company profile",
+     "publisher": "CB Insights",
+     "url": "https://www.cbinsights.com/company/one-click-lca",
+     "kind": "database",
+     "supports": "founded 2001; Helsinki headquarters"
+    },
+    {
+     "title": "What's new in One Click LCA in August 2026",
+     "publisher": "One Click LCA",
+     "url": "https://help.oneclicklca.com/en/articles/796024-what-s-new-in-one-click-lca-in-august-2026",
+     "kind": "company",
+     "supports": "AI agent that imports bills of materials from Excel"
+    }
+   ],
+   "id": "one-click-lca",
+   "body": "## What it does\nCalculates the environmental impact of buildings and products across their\nlife, produces environmental product declarations (EPDs), and supports\nregulatory and certification reporting, with large libraries of material data.\n\n## Why it matters for an AI-native firm\nCarbon is becoming a design constraint like cost. A firm that can compare\noptions on carbon automatically, from its models, has an advantage in bids\nwith carbon targets.\n\n## Evidence and caveats\n- Usage claims (150+ countries) are the company's own.",
+   "file": "companies/one-click-lca.md"
+  },
+  {
+   "name": "OpenSpace",
+   "summary": "360° site capture that automatically maps photos onto plans, with AI analytics and (since 2025) Disperse's progress tracking.",
+   "website": "https://www.openspace.ai",
+   "hq": "San Francisco, California, USA",
+   "founded": 2017,
+   "type": "scale-up",
+   "status": "active",
+   "categories": [
+    "site-capture-progress"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Reality capture is one of the more mature AI categories. Strong candidate for a standard site tool; compare with Buildots on a live project.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "OpenSpace company profile",
+     "publisher": "CB Insights",
+     "url": "https://www.cbinsights.com/company/openspace",
+     "kind": "database",
+     "supports": "San Francisco base; founders Jeevan Kalanithi, Michael Fleischman and Philip DeCamp; founded 2017"
+    },
+    {
+     "title": "OpenSpace announces new strategic partnerships to help bring Street View to construction",
+     "publisher": "JLL",
+     "url": "https://www.jll.com/en-belux/newsroom/openspace-announces-new-strategic-partnerships-to-help-bring-street-view",
+     "kind": "news",
+     "supports": "helmet-mounted capture; AI maps images onto plans without manual pinning"
+    }
+   ],
+   "id": "openspace",
+   "body": "## What it does\nA camera on a hard hat records a site walk; OpenSpace's AI places each image\non the floor plan automatically, building a time-stamped visual record of the\nsite that teams can browse like Street View. In October 2025 it bought\nDisperse, a progress-tracking company (reported in search results; the\nacquisition announcement itself wasn't read in this pass).\n\n## Why it matters for an AI-native firm\nA complete visual history of every project is a foundation for later AI uses\n(progress, quality, claims, training data), and capturing it costs little site\ntime.\n\n## Evidence and caveats\n- Funding totals vary widely between databases ($111m to $200m), so none is\n  given here.\n- The Disperse acquisition needs a primary source.\n\n## To check\n- Primary source for the Disperse acquisition; how many large contractors use it.",
+   "file": "companies/openspace.md"
+  },
+  {
+   "name": "Procore",
+   "summary": "A leading construction project-management platform, now adding AI agents through its \"Helix\" intelligence layer.",
+   "website": "https://www.procore.com",
+   "hq": "Not checked yet",
+   "founded": null,
+   "type": "incumbent",
+   "status": "active",
+   "categories": [
+    "data-platforms",
+    "document-intelligence"
+   ],
+   "ai_role": "embedded",
+   "ring": "adopt",
+   "ring_note": "The platform is a mainstream choice for contractors. Its AI agents are newer (Agent Builder launched October 2025) and would be \"trial\" on their own; Procore says agents never act without sign-off.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Procore advances the future of construction with new AI innovations at Groundbreak 2025",
+     "publisher": "Business Wire",
+     "url": "https://www.businesswire.com/news/home/20251015796723/en/Procore-Advances-the-Future-of-Construction-with-New-AI-Innovations-at-Groundbreak-2025",
+     "kind": "news",
+     "supports": "Agent Builder (October 2025) for no-code agents such as RFI drafting and daily logs; quote from Mortenson's Director of AI",
+     "date": "2025-10-15"
+    },
+    {
+     "title": "New Procore AI experience embeds Datagrid into Procore",
+     "publisher": "Procore",
+     "url": "https://www.procore.com/press/new-procore-ai-experience-embeds-datagrid-into-procore",
+     "kind": "company",
+     "supports": "2026 \"digital coworker\" agents that act inside Procore (Deep Search, Submittal Reviewer, RFI, Contract Review, Daily Log)"
+    },
+    {
+     "title": "Procore Helix",
+     "publisher": "Procore",
+     "url": "https://www.procore.com/helix-intelligence",
+     "kind": "company",
+     "supports": "Helix described as AI, agentic workflows, analytics and insights"
+    }
+   ],
+   "id": "procore",
+   "body": "## What it does\nCloud software for running construction projects: documents, drawings, RFIs,\nsubmittals, budgets, daily logs and more. \"Helix\" is its AI layer: an\nassistant, pre-built agents, and Agent Builder for firms to make their own.\n\n## Why it matters for an AI-native firm\nIf a firm's project data already lives in Procore, its AI features can work\nacross that data without extra integration. The strategic question is whether\nto build the firm's AI on a platform's agents (fast, but tied to that vendor)\nor on its own data layer (more control, more work).\n\n## Evidence and caveats\n- Agent names and plan tiers changed between 2025 and 2026 announcements;\n  check current documentation before quoting them.\n- Headquarters and founding year not checked in this pass.",
+   "file": "companies/procore.md"
+  },
+  {
+   "name": "TestFit",
+   "summary": "Generative design software that produces and tests building and site layouts for feasibility studies in minutes.",
+   "website": "https://www.testfit.io",
+   "hq": "Dallas, Texas, USA",
+   "founded": 2017,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "design-automation"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "Established with developers, architects and contractors for early feasibility. Quick to trial on a live bid or site appraisal.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "TestFit lands $20M to expand real estate feasibility analytics software",
+     "publisher": "SiliconANGLE",
+     "url": "https://siliconangle.com/2022/07/26/testfit-lands-20m-expand-real-estate-feasibility-analytics-software/",
+     "kind": "news",
+     "supports": "$20m Series A (July 2022), total $22m",
+     "date": "2022-07-26"
+    },
+    {
+     "title": "Dallas' TestFit to launch generative design tool for building site planning",
+     "publisher": "Dallas Innovates",
+     "url": "https://dallasinnovates.com/dallas-testfit-to-launch-generative-design-tool-for-building-site-planning/",
+     "kind": "news",
+     "supports": "Dallas company; generative design tool launched July 2020; co-founders Clifton Harness (CEO) and Ryan Griege (CTO)"
+    }
+   ],
+   "id": "testfit",
+   "body": "## What it does\nUsers set a site, building type and targets (units, parking, cost), and the\nsoftware generates and scores many layout options, including multi-site\nstudies.\n\n## Why it matters for an AI-native firm\nMoves early design from days of drawing to minutes of comparing, so a\ndesign-and-build contractor can test more opportunities and price them\nsooner.\n\n## Evidence and caveats\n- Founding year 2017 is from a 2021 Dallas Innovates piece (another report\n  says code started in 2016). No funding after 2022 found.",
+   "file": "companies/testfit.md"
+  },
+  {
+   "name": "Togal.AI",
+   "summary": "AI take-off software that detects and measures spaces and features on drawings for estimators.",
+   "website": "https://www.togal.ai",
+   "hq": "Miami, Florida, USA",
+   "founded": 2019,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "preconstruction-estimating"
+   ],
+   "ai_role": "core",
+   "ring": "trial",
+   "ring_note": "A focused tool with a clear payback test: run it on past bids and compare with the estimators' take-offs.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Togal.AI company profile",
+     "publisher": "CB Insights",
+     "url": "https://www.cbinsights.com/company/togalai",
+     "kind": "database",
+     "supports": "cloud take-off software that detects, measures and labels spaces on plans; about $22.65m raised"
+    },
+    {
+     "title": "Using artificial intelligence to streamline and simplify project takeoffs",
+     "publisher": "Togal.AI",
+     "url": "https://togal.ai/news/using-artificial-intelligence-to-streamline-and-simplify-project-takeoffs",
+     "kind": "company",
+     "supports": "founded by Patrick Murphy, a fourth-generation general contractor, to improve estimating at his family's firm"
+    },
+    {
+     "title": "eTakeoff announces partnership with Togal.AI",
+     "publisher": "Silicon UK",
+     "url": "https://www.silicon.co.uk/press-release/etakeoff-announces-partnership-with-togal-ai",
+     "kind": "news",
+     "supports": "integration with eTakeoff Dimension"
+    }
+   ],
+   "id": "togal-ai",
+   "body": "## What it does\nUpload a set of drawings and the software finds and measures rooms, walls and\nother elements automatically, producing quantities for estimators to check and\nprice.\n\n## Why it matters for an AI-native firm\nEstimating decides what a firm wins and whether it makes money. Faster take-off\nlets the same team bid more work or spend time on judgement. It's also an easy\nplace to measure AI's value: compare against past jobs.\n\n## Evidence and caveats\n- Speed and accuracy claims vary by source (80% faster; 97% accuracy; up to\n  90% less time) and all trace back to the company.\n\n## To check\n- Independent accuracy tests; coverage of UK drawing conventions.",
+   "file": "companies/togal-ai.md"
+  },
+  {
+   "name": "Trunk Tools",
+   "summary": "AI agents that read a project's documents (drawings, specs, RFIs, submittals) to answer questions and check work.",
+   "website": "https://trunktools.com",
+   "hq": "Not checked yet",
+   "founded": null,
+   "type": "startup",
+   "status": "active",
+   "categories": [
+    "document-intelligence"
+   ],
+   "ai_role": "core",
+   "ring": "assess",
+   "ring_note": "One of the most \"agentic\" products in construction, with big-contractor names attached, but young and fast-changing. Worth a close look for an AI-native strategy; evidence of outcomes is still mainly the company's own.",
+   "verification": "ai-draft",
+   "last_checked": "2026-10-23",
+   "sources": [
+    {
+     "title": "Trunk Tools closes $40M Series B to lead construction's AI transformation",
+     "publisher": "Insight Partners",
+     "url": "https://www.insightpartners.com/ideas/trunk-tools-closes-40m-series-b-to-lead-constructions-ai-transformation/",
+     "kind": "news",
+     "supports": "$40m Series B (July 2025) led by Insight Partners, total $70m; customers include Suffolk and DPR; CEO Sarah Buchner"
+    },
+    {
+     "title": "Contech firm Trunk Tools closes $40M Series B round",
+     "publisher": "Commercial Observer",
+     "url": "https://commercialobserver.com/2025/07/trunk-tools-contech-series-b/",
+     "kind": "news",
+     "supports": "independent report of the Series B"
+    },
+    {
+     "title": "Trunk Tools product page",
+     "publisher": "Trunk Tools",
+     "url": "https://trunktools.com/product/",
+     "kind": "company",
+     "supports": "agents for document Q&A, submittal checks, drawing-revision changes, RFIs and contracts"
+    }
+   ],
+   "id": "trunk-tools",
+   "body": "## What it does\nBuilds a connected map of a project's documents and runs AI agents on top:\nanswering site questions from the documents, checking submittals against the\nspec, spotting changes between drawing revisions, and helping with RFIs and\ncontracts. It integrates with Autodesk Forma.\n\n## Why it matters for an AI-native firm\nThis is close to what \"AI at the centre\" looks like day to day: every project\ndocument is searchable and checked automatically, and agents do first drafts\nof routine work for people to approve.\n\n## Evidence and caveats\n- Growth figures (5× revenue in six months; 1,000 projects) are the\n  company's own claims.\n- Headquarters not checked in this pass.\n\n## To check\n- Headquarters; how answers are cited and checked; data security terms.",
+   "file": "companies/trunk-tools.md"
+  }
+ ],
+ "analyses": [
+  {
+   "title": "The prefab and modular graveyard: why industrialized construction has failed",
+   "publisher": "OneBuild (Substack)",
+   "date": "Not checked",
+   "url": "https://onebuild.substack.com/p/the-prefab-and-modular-graveyard",
+   "kind": "opinion",
+   "independence": "Opinion newsletter; author's interests not checked",
+   "last_checked": "2026-10-23",
+   "id": "modular-graveyard-onebuild",
+   "body": "**What it argues (from a search summary; not read in full):** first-\ngeneration modular firms failed not because industrialisation is impossible\nbut because their models didn't fit construction's economic, operational and\nfinancial realities.\n\n**Useful for:** a counter-view to vendor optimism about offsite construction.\n\n**Caveats:** opinion, not research. Read in full before citing.",
+   "file": "analyses/modular-graveyard-onebuild.md"
+  },
+  {
+   "title": "Top 50 Contech startups of 2025",
+   "publisher": "Cemex Ventures",
+   "date": "2025-01-22",
+   "url": "https://www.cemexventures.com/top-50/",
+   "kind": "list",
+   "independence": "Corporate venture arm of Cemex (a building-materials company); it invests in some of the startups it ranks",
+   "last_checked": "2026-10-23",
+   "id": "cemex-ventures-top-50-2025",
+   "body": "**What it is:** an annual ranking (the sixth edition in 2025) of construction\ntech startups, in four areas: Green Construction, Enhanced Productivity,\nConstruction Supply Chain and Future of Construction.\n\n**Headline data quoted with it:** Contech investment in 2024 of about\n$3.1 billion across 325 deals; deal count up about 38% but money up only about\n2.3% on 2023; Enhanced Productivity 47% of deals, Green Construction 24%.\n\n**Useful for:** finding startups to add to this radar, especially in Europe\nand Latin America.\n\n**Caveats:** the full list wasn't read in this pass. Cemex Ventures is an\ninvestor, not a neutral judge.",
+   "file": "analyses/cemex-ventures-top-50-2025.md"
+  },
+  {
+   "title": "AI powers $3.96B venture boom in US construction tech (BuiltWorlds Q2 2025 data)",
+   "publisher": "BDC Network, reporting BuiltWorlds data",
+   "date": "2025",
+   "url": "https://www.bdcnetwork.com/aec-tech/news/55321700/ai-powers-396b-venture-boom-in-us-construction-tech",
+   "kind": "data",
+   "independence": "Trade press reporting an industry network's venture data",
+   "last_checked": "2026-10-23",
+   "id": "builtworlds-q2-2025-venture",
+   "body": "**What it says:** in Q2 2025, $3.96 billion went into built-environment tech\nstartups; of 159 AEC deals, 110 involved AI/ML companies, which took about\n$2.71 billion (about 68%).\n\n**Useful for:** evidence that investment is now concentrated in AI, which\nmatters when judging which categories will keep improving fastest.\n\n**Caveats:** different trackers disagree. Cemex Ventures put AI's share of\n2025 contech funding at 77%; Superscout put it near two-thirds. Definitions of\n\"AI company\" and \"contech\" differ, so compare trends, not exact numbers.",
+   "file": "analyses/builtworlds-q2-2025-venture.md"
+  },
+  {
+   "title": "From start-up to scale-up: Accelerating growth in construction technology",
+   "publisher": "McKinsey & Company",
+   "date": "2023-05",
+   "url": "https://www.mckinsey.com/~/media/mckinsey/industries/private%20equity%20and%20principal%20investors/our%20insights/from%20start%20up%20to%20scale%20up%20accelerating%20growth%20in%20construction%20technology/from-start-up-to-scale-up-accelerating-growth-in-construction-technology-vf.pdf",
+   "kind": "report",
+   "independence": "Consultancy research (independent of vendors, but McKinsey sells advice on this topic)",
+   "last_checked": "2026-10-23",
+   "id": "mckinsey-start-up-to-scale-up-2023",
+   "body": "**What it says (from summaries; the full PDF wasn't read in this pass):**\nAEC is a roughly $12 trillion industry that has been slow to digitise.\nInvestment in AEC tech reached $50 billion between 2020 and 2022. The authors\nmapped more than 3,000 AEC tech companies and expect consolidation to\ncontinue. Demand for infrastructure, labour shortages and pressure for data\ntransparency are driving adoption.\n\n**Useful for:** the scale-of-market framing and the argument that integration\nand consolidation will decide which tools survive.\n\n**Caveats:** written before the 2024–26 wave of generative AI and agents.\nFigures like \"talent investment raises the odds of digital success 2.5×\" come\nfrom a secondary summary (BDC Network) and should be checked in the PDF.",
+   "file": "analyses/mckinsey-start-up-to-scale-up-2023.md"
+  },
+  {
+   "title": "Foundamental (construction-tech venture firm) and the \"data layer\" argument",
+   "publisher": "TechCrunch (fund announcement) and VC Sheet (partner profile)",
+   "date": "2022-12-13",
+   "url": "https://techcrunch.com/2022/12/13/foundamental-closes-85m-fund-for-early-stage-construction-tech-startups",
+   "kind": "article",
+   "independence": "Venture investor; argues for the kinds of companies it backs",
+   "last_checked": "2026-10-23",
+   "id": "foundamental-data-layer-view",
+   "body": "**Why it's here:** Foundamental is a specialist construction-tech venture\nfirm (its newer fund targeted $85m for early-stage startups). One of its\npartners, Shub Bhattacharya, argues that lasting value in construction AI will\ncome from data infrastructure and systems of record rather than thin AI-only\napps (per his VC Sheet profile: https://www.vcsheet.com/who/shub-bhattacharya).\n\n**Useful for:** the central strategic question for an AI-native firm: own the\ndata layer, or rent AI features from platforms?\n\n**Caveats:** the argument is summarised from a profile page, not a published\nreport; find a primary piece by the author before quoting.",
+   "file": "analyses/foundamental-data-layer-view.md"
+  },
+  {
+   "title": "What does Katerra's demise mean for the contech and modular industries?",
+   "publisher": "Construction Dive",
+   "date": "2021",
+   "url": "https://www.constructiondive.com/news/what-does-katerras-demise-mean-for-the-contech-and-modular-industries/608037/",
+   "kind": "article",
+   "independence": "Independent trade press",
+   "last_checked": "2026-10-23",
+   "id": "katerra-lessons-construction-dive",
+   "body": "**Why it's here:** the leading cautionary tale for any plan to transform a\nconstruction business through technology and vertical integration. See the\nKaterra entry for a summary of causes and the other sources.\n\n**Useful for:** pressure-testing a client's transformation plan: is it staged,\ndoes each stage pay back, and is the core project economics sound?",
+   "file": "analyses/katerra-lessons-construction-dive.md"
+  }
+ ]
+}

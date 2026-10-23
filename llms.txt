@@ -1,0 +1,48 @@
+# AEC Tech Radar
+
+> A research map of construction, engineering and architecture (AEC) technology firms, with sources for every fact. Entries marked ai-draft were researched by an AI and not yet checked by a person: check the sources before relying on them.
+
+Everything in one file: https://leo-hyde.github.io/aec-tech-radar/data/radar.json
+How the research is done and what the fields mean: https://leo-hyde.github.io/aec-tech-radar/docs/METHOD.md
+
+## Categories
+
+- [Project data platforms](https://leo-hyde.github.io/aec-tech-radar/categories/data-platforms.md): Where does all project data live, and can AI reach it?
+- [Document and contract intelligence](https://leo-hyde.github.io/aec-tech-radar/categories/document-intelligence.md): Can AI read, check and answer questions about the project's documents?
+- [Design and feasibility automation](https://leo-hyde.github.io/aec-tech-radar/categories/design-automation.md): Can AI generate and test design options faster than people can?
+- [Carbon and sustainability analysis](https://leo-hyde.github.io/aec-tech-radar/categories/carbon-sustainability.md): Can the firm measure and cut the carbon in what it designs and builds?
+- [Preconstruction and estimating](https://leo-hyde.github.io/aec-tech-radar/categories/preconstruction-estimating.md): Can AI speed up quantity take-off, estimating and bidding?
+- [Planning, scheduling and risk forecasting](https://leo-hyde.github.io/aec-tech-radar/categories/planning-scheduling.md): Can AI build better programmes and predict delays before they happen?
+- [Site capture and progress tracking](https://leo-hyde.github.io/aec-tech-radar/categories/site-capture-progress.md): Does the firm know, objectively and weekly, what has actually been built?
+- [Construction robotics and autonomy](https://leo-hyde.github.io/aec-tech-radar/categories/robotics-autonomy.md): Which physical site tasks can machines now do reliably?
+- [Industrialised and offsite construction](https://leo-hyde.github.io/aec-tech-radar/categories/industrialised-construction.md): Can building move from the site to the factory, and is it worth it?
+- [Digital twins and operations](https://leo-hyde.github.io/aec-tech-radar/categories/digital-twins-operations.md): Does the asset keep producing useful data after handover?
+
+## Companies
+
+- [ALICE Technologies](https://leo-hyde.github.io/aec-tech-radar/companies/alice-technologies.md): AI that generates and compares thousands of possible construction schedules for large capital projects. (ring: trial; ai-draft)
+- [Autodesk](https://leo-hyde.github.io/aec-tech-radar/companies/autodesk.md): Maker of Revit; its Forma cloud now combines design and construction (the former Autodesk Construction Cloud) with an AI assistant and agents. (ring: adopt; ai-draft)
+- [Bentley Systems](https://leo-hyde.github.io/aec-tech-radar/companies/bentley-systems.md): Infrastructure engineering software built around its iTwin digital-twin platform, adding AI design and assistant tools. (ring: adopt; ai-draft)
+- [Buildots](https://leo-hyde.github.io/aec-tech-radar/companies/buildots.md): Helmet-mounted 360° cameras plus computer vision that compare what's built on site against the BIM model and programme. (ring: trial; ai-draft)
+- [Built Robotics](https://leo-hyde.github.io/aec-tech-radar/companies/built-robotics.md): Autonomy kits that turn excavators into robots, now focused on utility-scale solar piling (RPD 35) and trenching. (ring: assess; ai-draft)
+- [Canvas](https://leo-hyde.github.io/aec-tech-radar/companies/canvas.md): A semi-autonomous robot that sprays and sands drywall to a high finish, operated by trained union workers. (ring: assess; ai-draft)
+- [Document Crunch](https://leo-hyde.github.io/aec-tech-radar/companies/document-crunch.md): AI that reviews construction contracts for risk and helps site teams follow them; Trimble agreed to buy it in April 2026. (ring: trial; ai-draft)
+- [Dusty Robotics](https://leo-hyde.github.io/aec-tech-radar/companies/dusty-robotics.md): A mobile robot (FieldPrinter) that prints the BIM layout directly onto the floor of a building site. (ring: trial; ai-draft)
+- [Katerra](https://leo-hyde.github.io/aec-tech-radar/companies/katerra.md): A SoftBank-backed attempt to vertically integrate design, manufacturing and construction; went bankrupt in 2021. Kept here as a lesson. (ring: none; ai-draft)
+- [Nemetschek Group](https://leo-hyde.github.io/aec-tech-radar/companies/nemetschek.md): AEC software group (products include Archicad and Allplan) adding a shared AI layer and AI assistant across its products. (ring: trial; ai-draft)
+- [nPlan](https://leo-hyde.github.io/aec-tech-radar/companies/nplan.md): Forecasts schedule delay risk with machine learning trained on hundreds of thousands of past project schedules. (ring: trial; ai-draft)
+- [One Click LCA](https://leo-hyde.github.io/aec-tech-radar/companies/one-click-lca.md): Life-cycle assessment and embodied-carbon software for buildings, infrastructure and building products. (ring: adopt; ai-draft)
+- [OpenSpace](https://leo-hyde.github.io/aec-tech-radar/companies/openspace.md): 360° site capture that automatically maps photos onto plans, with AI analytics and (since 2025) Disperse's progress tracking. (ring: trial; ai-draft)
+- [Procore](https://leo-hyde.github.io/aec-tech-radar/companies/procore.md): A leading construction project-management platform, now adding AI agents through its "Helix" intelligence layer. (ring: adopt; ai-draft)
+- [TestFit](https://leo-hyde.github.io/aec-tech-radar/companies/testfit.md): Generative design software that produces and tests building and site layouts for feasibility studies in minutes. (ring: trial; ai-draft)
+- [Togal.AI](https://leo-hyde.github.io/aec-tech-radar/companies/togal-ai.md): AI take-off software that detects and measures spaces and features on drawings for estimators. (ring: trial; ai-draft)
+- [Trunk Tools](https://leo-hyde.github.io/aec-tech-radar/companies/trunk-tools.md): AI agents that read a project's documents (drawings, specs, RFIs, submittals) to answer questions and check work. (ring: assess; ai-draft)
+
+## Other people's analysis
+
+- [The prefab and modular graveyard: why industrialized construction has failed](https://leo-hyde.github.io/aec-tech-radar/analyses/modular-graveyard-onebuild.md): OneBuild (Substack), Not checked
+- [Top 50 Contech startups of 2025](https://leo-hyde.github.io/aec-tech-radar/analyses/cemex-ventures-top-50-2025.md): Cemex Ventures, 2025-01-22
+- [AI powers $3.96B venture boom in US construction tech (BuiltWorlds Q2 2025 data)](https://leo-hyde.github.io/aec-tech-radar/analyses/builtworlds-q2-2025-venture.md): BDC Network, reporting BuiltWorlds data, 2025
+- [From start-up to scale-up: Accelerating growth in construction technology](https://leo-hyde.github.io/aec-tech-radar/analyses/mckinsey-start-up-to-scale-up-2023.md): McKinsey & Company, 2023-05
+- [Foundamental (construction-tech venture firm) and the "data layer" argument](https://leo-hyde.github.io/aec-tech-radar/analyses/foundamental-data-layer-view.md): TechCrunch (fund announcement) and VC Sheet (partner profile), 2022-12-13
+- [What does Katerra's demise mean for the contech and modular industries?](https://leo-hyde.github.io/aec-tech-radar/analyses/katerra-lessons-construction-dive.md): Construction Dive, 2021

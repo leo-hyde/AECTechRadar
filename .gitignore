@@ -1,0 +1,7 @@
+.claude/*
+!.claude/settings.json
+!.claude/rules/
+.session/
+.DS_Store
+__pycache__/
+!.claude/skills/
