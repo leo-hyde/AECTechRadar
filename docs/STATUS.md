@@ -1,43 +1,53 @@
 # Live status
 
-The current state of the project, shared between Leo's phone and computer
-sessions. **Every Claude session reads this first and updates it after every
-finished step**, then commits and pushes. Current state only: overwrite, don't
-append. History is in `git log`; decisions are in `docs/decisions.md`.
+Where the project stands right now, shared between Leo's phone and Mac
+sessions. **Every Claude session reads this first, and updates it after
+every finished step**, then saves and uploads the change (commit and push).
+It shows the current state only: overwrite it, don't add to the bottom. The
+history is in `git log`; the decisions are in `docs/decisions.md`.
 
 ## Handover (overwrite this block every session)
 
 | | |
 |---|---|
-| Last session | Mac, 24 Oct 2026 (built source capture) |
-| Ended cleanly? | Yes, all pushed to `main` (both repos) |
-| Mid-flight work | None. Source capture runs daily in private repo `leo-hyde/AECTechRadar-sources`: 126 of 187 cited pages saved; 61 failed, each with a reason in its `REPORT.md` |
-| Next step | Leo answers the 6 decisions in docs/research/1a-foresight-methods.md; steps 1b and 1c in fresh sessions |
-| Check first | `REPORT.md` in the private repo, for which sources rest on search summaries only |
-| Note | The 1a sources were read via search summaries only: many full texts are now in the private repo (`pages/`) |
+| Last session | Mac, 24 Oct 2026 (plain-English rewrite of the docs) |
+| Ended cleanly? | Yes, everything uploaded to `main` (this project and the playbook) |
+| Work in progress | None. The docs are now in plain English (see `docs/playbook-catch-up.md`). The playbook now flags rule changes that older projects still need to apply ("catch-ups") |
+| Next step | Leo answers the 6 decisions at the top of docs/research/1a-foresight-methods.md (each now has my recommendation); then steps 1b and 1c, each in a fresh session |
+| Check first | `REPORT.md` in the private repository, to see which sources we still only know from search summaries |
+| Note | The firm, category and analysis entries haven't had the plain-English pass yet |
 
 ## Where we are
 
-Prototype live-ready (Pages needs switching on by Leo): 10 categories, 17
-firms, 6 outside analyses, all AI drafts with sources. Phase 1 (build the
-research method and tool, AEC as the test case) is under way:
-**step 1a done**: docs/research/1a-foresight-methods.md, a sourced review of
-foresight methods ending with 14 proposed method decisions (each with a
-confidence level) and 6 questions for Leo. Steps 1b (AI research
-reliability) and 1c (users and lenses) not started. Source capture (step 3.5,
-brought forward) is built: a daily GitHub Action in the private repo
-`leo-hyde/AECTechRadar-sources` saves the text of every cited page (126 of
-187 so far; the rest blocked, gone, robots-forbidden or JavaScript-only) and
-asks the Internet Archive to save them too.
+The prototype is ready to go live once Leo switches on GitHub Pages (GitHub's
+free web hosting). It has 10 categories, 17 firms and 6 outside analyses,
+all AI drafts with sources.
+
+Phase 1 (building the research method and tool, with AEC as the test case)
+is under way:
+- **Step 1a is done:** docs/research/1a-foresight-methods.md reviews, with
+  sources, how professionals look ahead at technology. It ends with 14
+  proposals (each with a confidence level) and 6 decisions for Leo.
+- **Steps 1b** (how AI can do research reliably) **and 1c** (who the users
+  are and what they need) haven't started.
+- **Source capture is built** (step 3.5, done early). Every day, a GitHub
+  Action (a job on GitHub's computers) in the private repository
+  `leo-hyde/AECTechRadar-sources` saves the text of every page we cite. So
+  far it has saved 126 of 187. The rest were blocked, have gone, are
+  forbidden to automatic visitors, or need JavaScript to show their text. It
+  also asks the Internet Archive to save each page.
 
 ## Next steps
 
 1. Leo answers the 6 decisions in the 1a report.
-2. Steps 1b and 1c deep research: one fresh session each.
-3. Step 2: turn the three reports into decisions.md entries and data model v2; then build steps 3.1–3.6.
+2. Research for steps 1b and 1c: one fresh session each.
+3. Step 2: turn the three reports into entries in decisions.md and version 2
+   of the data format; then build steps 3.1 to 3.6.
 
 ## Open questions
 
-- Is the site live (GitHub Pages switched on)?
-- The 6 "Decisions for Leo" in docs/research/1a-foresight-methods.md.
-- Cloudflare: no credentials in cloud sessions; using it needs Leo to create an API token and store it as a GitHub secret (only if step 2 shows we need it).
+- Is the site live yet (GitHub Pages switched on)?
+- The 6 "Decisions for Leo" at the top of the 1a report.
+- Cloudflare (a service that could run small bits of code for us): cloud
+  sessions have no login for it. Using it needs Leo to create a key and
+  store it as a GitHub secret. Only needed if step 2 shows we need it.

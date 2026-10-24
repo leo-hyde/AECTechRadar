@@ -1,5 +1,110 @@
 # Foresight earns trust through transparency, not prediction
 
+## In plain English (read this first)
+
+**What this report is.** "Foresight" means the methods professionals use to
+look ahead at technology: scanning for early signs of change, asking experts
+in structured ways, rating how mature a technology is, and counting patents
+and research papers. I reviewed what the research says about these methods,
+so we can choose how the radar should work.
+
+**What it found, in five points.**
+1. No method predicts well far ahead. Forecasts more than ten years out came
+   true only about one time in seven.
+2. Foresight pays off when it is tied to a named decision and repeated on a
+   regular cycle. It fails most often because nobody uses it.
+3. The popular tools (technology radars, hype cycles, Wardley maps) are
+   useful ways of talking, but nobody has tested whether they work.
+4. The best-tested habits come from forecasting research: write down dated
+   predictions and check them later; ask experts in a structured way; combine
+   several people's views; and start from what usually happens.
+5. So our rings should be open, sourced judgements for a stated user and
+   decision, never predictions.
+
+**How far to trust it.** The research tool couldn't open web pages, so I read
+every source through search summaries only, not the full text. The section
+"How this was researched and its limits" lists the claims most in need of
+checking. Many full texts are now saved in the private repository
+`leo-hyde/AECTechRadar-sources`, so we can check them.
+
+### Decisions for Leo
+Each has my recommendation. The numbered proposals they refer to are in "What
+this means for us", near the end.
+
+1. **What gets a ring?** Technologies only (proposal 1); companies only (as
+   now); or both, with company rings meaning "how sound is this supplier?"
+   *My recommendation: technologies only. Each company gets a factual
+   profile, and supplier soundness becomes one of the rating dimensions
+   (proposal 3). Confidence: medium.*
+2. **Which lenses do we publish?** A lens is the type of user a judgement is
+   made for. Keep one default lens ("a large UK construction firm, over the
+   next 1–3 years"), or publish several? Should lenses shaped around a client
+   stay private?
+   *My recommendation: one public default lens for now. Any lens shaped
+   around a real client stays private, since this repository is public.*
+3. **Public forecasts with a score?** Are you comfortable publishing dated
+   predictions with a stated likelihood, which may be visibly wrong? This is
+   the strongest way to learn, and also a risk to your reputation.
+   *My recommendation: write them for one round but keep them private,
+   then decide on publishing once you've seen them. This is my suggestion,
+   not something the research tested.*
+4. **A second rater and an expert panel?** Who could rate a sample of items
+   independently, or join a small expert panel, and could their names be
+   public?
+   *My recommendation: you act as second rater to start. Name anyone else
+   only with their consent. Only you can answer who else.*
+5. **How often, against the budget?** Is a new edition twice a year, with
+   items flagged as out of date after 6 and 12 months, affordable? Or is once
+   a year more realistic?
+   *My recommendation: once a year to start, but show the "out of date" flags
+   from day one, so readers can see what's old. Move to twice a year if the
+   budget allows.*
+6. **Counts of patents and research papers?** Is it worth building these,
+   given how few patents construction firms file? Or should we rely on
+   evidence of real use and public reports?
+   *My recommendation: not now. Rely on evidence of real use and public
+   reports, and revisit if a category turns out to be patent-heavy.*
+
+### Words used in this report
+- **Horizon scanning:** searching widely and regularly for early signs of change.
+- **Weak signal:** an early, unclear hint that something may be changing.
+- **Technology radar / rings:** a published list that places each technology
+  in a ring: adopt, trial, assess or hold.
+- **Readiness levels (TRL, ARL, CRI):** scales for how mature something is.
+  TRL rates the technology (1 to 9); ARL rates how ready the market is to
+  adopt it; CRI rates how ready it is commercially.
+- **Hype cycle:** Gartner's chart of excitement about a technology rising,
+  crashing, then levelling off.
+- **Wardley map:** a strategy chart that places each part of a product by how
+  mature and standard it has become.
+- **Scenario planning:** imagining several possible futures to test plans
+  against.
+- **Delphi:** anonymous rounds in which experts give a view, see the group's
+  answers, and revise. **Policy Delphi** reports the disagreements instead of
+  forcing agreement.
+- **Structured elicitation (IDEA, SHELF, Cooke's method):** step-by-step ways
+  of getting careful estimates from a small panel of experts.
+- **Brier score:** a score for how good a set of probability forecasts was,
+  once the answers are known. Lower is better.
+- **Base rate / reference class / outside view:** starting from how similar
+  past cases turned out, before adjusting for this one.
+- **Ordinal scale:** a ranking (low, medium, high) where the gaps between
+  steps aren't equal, so averaging the steps is misleading.
+- **Sensitivity / specificity:** how many of the things that mattered were
+  flagged / how many of the things that didn't matter were correctly left out.
+- **False alarm:** something flagged that turned out not to matter.
+- **Bibliometrics / tech mining:** counting and analysing research papers and
+  patents to spot rising topics.
+- **CREDES:** a checklist for reporting how a Delphi study was done.
+- **LLM:** a large language model, the kind of AI behind tools like Claude.
+- **Lens:** the type of user (and their decision) that a judgement is made for.
+- **Gold set:** claims Leo has checked by hand, used as an answer key to score
+  AI research.
+- **Edition:** one dated round of reviewing the radar.
+- **Signpost:** an event you could see happen that would change a rating.
+
+## The full report
+
 Professionals do technology foresight with a small set of methods. They scan widely for signs of change, ask experts in structured ways, map technologies by maturity, and mine patents and papers. The strongest finding across all of them is about use, not method. Foresight pays off only when it is tied to named decisions and a regular cycle. It fails most often because nobody uses it, not because the method was wrong ([Fraunhofer Publica](https://publica.fraunhofer.de/handle/publica/251044); [HC 703](https://publications.parliament.uk/pa/cm201314/cmselect/cmsctech/703/703.pdf)). Measured accuracy is modest. The few audits that exist find that roughly two-thirds of flagged items turn out to matter. They also find that forecasts more than ten years out come true only about one time in seven ([University of Birmingham](https://research.birmingham.ac.uk/files/17448534/SmithCookPackerS026646231000036Xa.pdf); [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S004016252500527X); [stafforini.com](https://stafforini.com/works/fye-2013-examination-factors-affecting/)). The popular tools rest on practitioner opinion, not tested evidence. That covers technology radars, hype cycles, Wardley maps and trend frameworks. The best-tested practices come from forecasting research. They are: score your forecasts against what happened, structure expert input, combine several judges, and start from base rates. For AEC Tech Radar, this means four things. Treat rings as transparent, sourced judgements for a stated user and decision. Never present them as predictions. Rate on a few separate dimensions rather than one number. Build in the checks (second raters, dated forecasts, a reporting checklist) that most foresight programmes skip.
 
 ## How this was researched and its limits
@@ -238,9 +343,5 @@ Each proposal states what we'd do, why, what we'd reject, and a confidence level
 
 ### Decisions for Leo
 
-1. **What gets a ring:** technologies only (proposal 1), companies only (as now), or both, with company rings kept as "vendor readiness"?
-2. **Which lenses to publish:** keep one default lens ("large UK construction firm, 1–3 years"), or publish several? Should client-shaped lenses stay private?
-3. **Public, scored forecasts:** are you comfortable publishing dated probabilities that may be visibly wrong? This is the strongest learning tool, and also a reputational exposure.
-4. **Second rater and expert panel:** who can act as second rater or panellist, and can their names be public?
-5. **Cadence versus budget:** is a twice-yearly edition with 6- and 12-month staleness rules affordable? Or is once a year more realistic?
-6. **Data indicators:** is it worth building open patent and publication counts, given construction's low patenting? Or should we rely on deployment evidence and public reports?
+The six decisions, each with my recommendation, are at the top of this
+report under "In plain English".
