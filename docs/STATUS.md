@@ -9,12 +9,12 @@ append. History is in `git log`; decisions are in `docs/decisions.md`.
 
 | | |
 |---|---|
-| Last session | Mac, 24 Oct 2026 (source-capture plan) |
-| Ended cleanly? | Yes, all pushed to `main` |
-| Mid-flight work | None. Source capture agreed and private repo `leo-hyde/AECTechRadar-sources` created (empty); not built |
-| Next step | Build source capture (specs/source-capture.md) in a fresh Mac session; Leo answers the 6 decisions in docs/research/1a-foresight-methods.md; steps 1b and 1c in fresh sessions |
-| Check first | specs/source-capture.md |
-| Note | The 1a sources were read via search summaries only (no full texts): its "limits" section lists the claims to check before quoting them in public |
+| Last session | Mac, 24 Oct 2026 (building source capture) |
+| Ended cleanly? | No: mid-flight, all pushed |
+| Mid-flight work | Source capture built in private repo `leo-hyde/AECTechRadar-sources` (script, tests, daily Action); 5-link trial passed; first full run in progress; still to do: check REPORT.md, spot-check 10 pages, second run fetches nothing |
+| Next step | Finish the source-capture checks; Leo answers the 6 decisions in docs/research/1a-foresight-methods.md; steps 1b and 1c in fresh sessions |
+| Check first | `REPORT.md` in the private repo |
+| Note | The 1a sources were read via search summaries only: once capture finishes, their full texts are in the private repo |
 
 ## Where we are
 

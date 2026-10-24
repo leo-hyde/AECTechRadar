@@ -27,6 +27,9 @@ done: [docs/METHOD.md](docs/METHOD.md). Where we are:
 - **The `.md` files are the source of truth.** `data/radar.json`,
   `data/radar.js` and `llms.txt` are built from them: never edit those by
   hand; rebuild and commit them with the change.
+- **Saved copies of every cited page** are in the private repo
+  `leo-hyde/AECTechRadar-sources` (`pages/`, `index.json`, `REPORT.md`; a daily
+  GitHub Action saves them): read a source there, never copy its text here.
 - **Never let a fact in without a source**, and never guess a web address.
   Judgements (rings) are labelled as judgements. Only Leo sets
   `verification: checked`.

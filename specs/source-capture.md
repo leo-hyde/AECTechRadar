@@ -1,6 +1,6 @@
 # Source capture: save a copy of every cited page
 
-Status: **agreed by Leo on 24 Oct 2026 (all four recommendations). Not built yet.** The private repo `leo-hyde/AECTechRadar-sources` exists, empty. This is step 3.5 of
+Status: **built 24 Oct 2026** in the private repo `leo-hyde/AECTechRadar-sources` (its README says how it works). Internet Archive saves are anonymous, so there are still no secrets. This is step 3.5 of
 [phase-1-research-system.md](phase-1-research-system.md), brought forward.
 
 ## Why

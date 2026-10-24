@@ -48,6 +48,7 @@ the built files and the raw Markdown.
 | What | Where | Who can see it |
 |---|---|---|
 | Research | This repo | Anyone (public) |
+| Saved text of every cited page, fetched daily by a GitHub Action | Private repo `leo-hyde/AECTechRadar-sources` | Leo only |
 | Nothing about visitors | n/a | n/a |
 
 ## Outside services, limits and terms

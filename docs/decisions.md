@@ -3,6 +3,21 @@
 One entry per decision, newest first. If one is reversed, add a new entry and
 mark the old one "Replaced by <date>".
 
+## 2026-10-24: Source capture asks the Internet Archive anonymously, with trafilatura and pypdf
+- **What:** save requests to web.archive.org go without an account, at most
+  one every 25 seconds and 100 a run, skipping pages it saved in the last 30
+  days and pages whose robots.txt says no. Text comes from trafilatura 2.2.0
+  (web pages) and pypdf 6.19.0 (PDFs), every library pinned to a version at
+  least two weeks old.
+- **Why:** the Archive's own API docs say its full save service needs an
+  account key, which would be the project's first secret; anonymous saves
+  (3 a minute, 200 a day) are enough for about 190 links. trafilatura is a
+  widely used main-text extractor that outputs Markdown; pypdf has no
+  system dependencies.
+- **Rejected:** an Archive account key stored as a GitHub secret (not needed
+  yet); fetching pages with trafilatura's own downloader (less control over
+  robots.txt, pacing and results).
+
 ## 2026-10-24: Save a copy of every cited page, in a private repo, built now
 - **What:** a GitHub Action in the private repo `leo-hyde/AECTechRadar-sources`
   reads this public repo's links, saves each page's text there, and also asks
