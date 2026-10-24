@@ -9,11 +9,11 @@ append. History is in `git log`; decisions are in `docs/decisions.md`.
 
 | | |
 |---|---|
-| Last session | Cloud, 24 Oct 2026 (step 1a) |
+| Last session | Mac, 24 Oct 2026 (source-capture plan) |
 | Ended cleanly? | Yes, all pushed to `main` |
-| Mid-flight work | None |
-| Next step | Leo answers the 6 "Decisions for Leo" at the end of docs/research/1a-foresight-methods.md; steps 1b and 1c in fresh sessions (can run in parallel) |
-| Check first | docs/research/1a-foresight-methods.md, "What this means for us" |
+| Mid-flight work | None. specs/source-capture.md is a plan only, nothing built |
+| Next step | Leo answers the 4 decisions at the end of specs/source-capture.md and the 6 in docs/research/1a-foresight-methods.md; steps 1b and 1c in fresh sessions (can run in parallel) |
+| Check first | specs/source-capture.md, "Decisions for Leo" |
 | Note | The 1a sources were read via search summaries only (no full texts): its "limits" section lists the claims to check before quoting them in public |
 
 ## Where we are
@@ -24,11 +24,13 @@ research method and tool, AEC as the test case) is under way:
 **step 1a done**: docs/research/1a-foresight-methods.md, a sourced review of
 foresight methods ending with 14 proposed method decisions (each with a
 confidence level) and 6 questions for Leo. Steps 1b (AI research
-reliability) and 1c (users and lenses) not started.
+reliability) and 1c (users and lenses) not started. Step 3.5 (saving a copy
+of every cited page with a GitHub Action) is planned in specs/source-capture.md,
+proposed to be built early; awaiting Leo's go-ahead.
 
 ## Next steps
 
-1. Leo answers the 6 decisions in the 1a report.
+1. Leo answers the 6 decisions in the 1a report, and the 4 in specs/source-capture.md.
 2. Steps 1b and 1c deep research: one fresh session each.
 3. Step 2: turn the three reports into decisions.md entries and data model v2; then build steps 3.1–3.6.
 
@@ -36,4 +38,5 @@ reliability) and 1c (users and lenses) not started.
 
 - Is the site live (GitHub Pages switched on)?
 - The 6 "Decisions for Leo" in docs/research/1a-foresight-methods.md.
+- The 4 "Decisions for Leo" in specs/source-capture.md (where page copies live, Internet Archive, build now, who creates the private repo).
 - Cloudflare: no credentials in cloud sessions; using it needs Leo to create an API token and store it as a GitHub secret (only if step 2 shows we need it).
