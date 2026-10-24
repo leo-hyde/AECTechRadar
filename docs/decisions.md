@@ -3,6 +3,20 @@
 One entry per decision, newest first. If one is reversed, add a new entry and
 mark the old one "Replaced by <date>".
 
+## 2026-10-24: Save a copy of every cited page, in a private repo, built now
+- **What:** a GitHub Action in the private repo `leo-hyde/AECTechRadar-sources`
+  reads this public repo's links, saves each page's text there, and also asks
+  the Internet Archive to save it. Built before the step 2 decisions. Plan:
+  specs/source-capture.md.
+- **Why:** claims can then be checked against the full page, not search
+  summaries; copies are worth more the earlier they're taken, and they're
+  keyed by web address so any data model can use them. Private, because
+  copying others' pages into a public repo would republish them. The
+  private-repo set-up needs no secrets.
+- **Rejected:** copies in this public repo (republishing); Internet Archive
+  links only (slow, sometimes refused, no text of our own); waiting until
+  after step 2.
+
 ## 2026-10-23: Bundle marked and DOMPurify in `vendor/` instead of a CDN
 - **Why:** the cloud session couldn't reach CDNs to check them, the npm copies
   are exact versions, and the site keeps working if a CDN changes.

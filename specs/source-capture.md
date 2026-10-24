@@ -1,6 +1,6 @@
 # Source capture: save a copy of every cited page
 
-Status: **plan for Leo's review. Nothing built yet.** This is step 3.5 of
+Status: **agreed by Leo on 24 Oct 2026 (all four recommendations). Not built yet.** The private repo `leo-hyde/AECTechRadar-sources` exists, empty. This is step 3.5 of
 [phase-1-research-system.md](phase-1-research-system.md), brought forward.
 
 ## Why
@@ -91,9 +91,8 @@ cited; paid or logged-in sources.
    10 saved pages against the live ones and say how many matched.
 4. A second run fetches nothing already saved.
 
-## Decisions for Leo
+## Decisions (agreed; see docs/decisions.md)
 1. **Where the copies live:** A (private repo) recommended.
 2. **Internet Archive as well:** yes recommended.
 3. **Build now, before the step 2 decisions:** yes recommended (reasons above).
-4. **Who creates the private repo:** I can create it from the Mac with your
-   GitHub login, once you say yes.
+4. **Who creates the private repo:** Claude, from the Mac. Done 24 Oct 2026.
