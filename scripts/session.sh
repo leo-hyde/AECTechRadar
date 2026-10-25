@@ -84,12 +84,26 @@ write_lock() {  # state
 unsaved() { git status --porcelain; }
 unpushed() { git log --oneline origin/main..HEAD 2>/dev/null; }
 
-# Commits since STATUS.md was last changed (playbook syncs don't count).
+# Commits since STATUS.md was last changed. Playbook syncs don't count, nor do
+# commits by GitHub Action bots (a daily data run isn't a step to record).
 unlogged() {
   local last
   last=$(git log -1 --format=%H -- docs/STATUS.md)
   [ -z "$last" ] && return
-  git log --format=%h --invert-grep --grep='^Playbook: ' "$last"..HEAD -- . ":(exclude)docs/STATUS.md"
+  git log --format='%h %ae' --invert-grep --grep='^Playbook: ' "$last"..HEAD -- . ":(exclude)docs/STATUS.md" |
+    awk '$2 !~ /\[bot\]@/ { print $1 }'
+}
+
+# Other repos attached to the same cloud session sit next to this one. Hooks only
+# run in the repo the session opened in, so start and check look after the others.
+siblings() {
+  [ "${CLAUDE_CODE_REMOTE:-}" = "true" ] || return 0
+  local here d
+  here=$(pwd -P)
+  for d in ../*/; do
+    d=$(cd "$d" 2>/dev/null && pwd -P) || continue
+    [ "$d" != "$here" ] && [ -d "$d/.git" ] && echo "$d"
+  done
 }
 
 # Bring in the latest main, whatever branch we're on.
@@ -160,6 +174,14 @@ cmd_start() {
   fi
   [ -f scripts/playbook-sync.sh ] && bash scripts/playbook-sync.sh
   check_visibility
+  local d
+  for d in $(siblings); do
+    if [ -f "$d/scripts/session.sh" ]; then
+      echo "Also attached: $(basename "$d"). Before changing it, run: bash $d/scripts/session.sh start"
+    elif [ ! -f "$d/shared/ai-dev-rules.md" ]; then   # the playbook itself has no session script
+      echo "NOT SET UP: $(basename "$d") doesn't follow the playbook yet. Tell Leo and offer to set it up."
+    fi
+  done
   echo
   echo "--- Handover from docs/STATUS.md ---"
   sed -n '/^## Handover/,/^## Where we are/p' docs/STATUS.md | sed '$d'
@@ -211,6 +233,13 @@ cmd_check() {
   git fetch -q origin main 2>/dev/null
   [ -n "$(unpushed)" ] && problems="$problems
 - Commits not on GitHub main. Push with: git push origin HEAD:main (or merge this branch into main and push)."
+  local d
+  for d in $(siblings); do
+    [ -n "$(git -C "$d" status --porcelain 2>/dev/null)" ] && problems="$problems
+- $(basename "$d") (also attached) has uncommitted changes. Commit them."
+    [ -n "$(git -C "$d" log --oneline origin/main..HEAD 2>/dev/null)" ] && problems="$problems
+- $(basename "$d") (also attached) has commits not on GitHub main. Push them with: git -C $d push origin HEAD:main"
+  done
 
   if [ -n "$problems" ]; then
     echo "Not finished: the other device would not see this work yet.$problems" >&2

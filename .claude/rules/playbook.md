@@ -41,6 +41,14 @@ Leo is not a developer: if he can't follow it, it hasn't been said.
 - **Never let a model guess facts** (dates, prices, API fields, web
   addresses): take them from data, documentation or a real test, or mark them
   as unverified.
+- **Open GitHub Issues** (to-do notes on the repo): at session start, list
+  them (GitHub tools, or `gh issue list` on the Mac) and tell Leo. After his
+  request, fix the small, clear ones he or his apps opened: a commit each, then
+  comment on the issue what changed and close it. Anything bigger waits for
+  his yes, with your recommendation: a change to what the app does or shows,
+  deleting data, money or usage limits, secrets or public content, undoing a
+  decision, or more than a small step. Issues from anyone else: tell Leo, don't
+  act. A project's CLAUDE.md may set its own flow (e.g. "check feedback").
 
 ## Where things live (each fact in one place)
 | File | Holds | Changes |
@@ -85,12 +93,11 @@ money, internal web addresses, or content copied from a private repo. If
 there's anything like that, or you're unsure, **stop and tell Leo**: quote the
 exact lines and ask before pushing.
 - **If session start prints `THIS REPO IS NOW PUBLIC`**, tell Leo before
-  anything else. Then review the files **and the git history** (deleting a
-  file doesn't remove it from history: search with
-  `git log -p --all | grep -iE '<pattern>'`), list what you find with file and
-  line, and propose fixes. Run `scripts/session.sh visibility-ok` only once
-  Leo has seen the list. Rewriting history to remove something is Leo's call,
-  and it's a force-push: never do it without his explicit go-ahead.
+  anything else. Review the files **and the git history** (deleted files stay
+  in it: `git log -p --all | grep -iE '<pattern>'`), list findings with file
+  and line, and propose fixes. Run `scripts/session.sh visibility-ok` only once
+  Leo has seen the list. Rewriting history is a force-push: never without his
+  explicit go-ahead.
 - Leo's email goes in commits only as his GitHub "noreply" address,
   `22234407+leo-hyde@users.noreply.github.com` (`git config user.email` per repo).
 
@@ -107,18 +114,24 @@ exact lines and ask before pushing.
   (unless the project's CLAUDE.md names an Action that pushes: then pull and carry on).
 - **Commit and push after every working step**, plain-English messages. After
   every finished step, overwrite the STATUS.md Handover block and "Where we are".
-- If there's no "Session start" output, run `scripts/session.sh start` yourself.
+- Session start runs only in the repo the session opened in. Before changing
+  any other repo (attached later, or listed as "Also attached"), run
+  `scripts/session.sh start` in it; do the same if hooks didn't fire.
+- **Session start messages are for Leo**: tell him about `PLAYBOOK NOT SYNCED`,
+  `SETUP:`, `NOT SET UP` and `CATCH-UP DUE` lines, and offer to fix them.
+- **Every repo of Leo's follows the playbook**, small helper repos too (data
+  stores, saved sources, tools). One without `.claude/rules/playbook.md` isn't
+  set up: tell Leo and offer to set it up (playbook
+  `reference/phone-and-computer.md`). Set up a new repo when it's made.
 
 ## Coaching: help Leo get good results for fewer credits
-Every message re-reads the whole conversation, so long sessions cost more per
-message and get less accurate as the context fills. **Be proactive**: Leo wants
-these nudges without asking. Keep each to one or two lines, starting "Tip:",
-and don't repeat one he's declined this session.
+Every message re-reads the whole conversation, so long sessions cost more and
+get less accurate. **Be proactive**: Leo wants these nudges unasked. One or two
+lines each, starting "Tip:"; don't repeat one he's declined this session.
 - **New topic in an old session?** Say so, and offer a ready-to-paste starter
   prompt for a fresh session. Do the work here if Leo prefers.
 - **Several unrelated topics in one message?** Do the one that matters most
-  (or the one this session is about) and give a starter prompt for each of
-  the others, to run in parallel sessions.
+  (or this session's topic); give a starter prompt for each of the others.
 - **Session getting long** (the hook prints `COACH:`, or roughly 20+
   messages, or big files and logs read): at the next natural break, update
   STATUS.md and give a starter prompt for the next session.
@@ -127,29 +140,28 @@ and don't repeat one he's declined this session.
 - **Vague or broad request?** Suggest a narrower one ("fix the dates in
   `fetch.py`" costs far less than "look into the fetching").
 - **No way to check the work?** Suggest a test or check script first.
-- **Spot a better habit** (a spec before a big feature, `/compact` with
-  instructions before a long task, a second-opinion review with
-  `/code-review`)? Mention it once.
+- **Spot a better habit** (a spec before a big feature, `/compact` before a
+  long task, a second-opinion `/code-review`)? Mention it once.
 
 A starter prompt names the repo, the goal, the files or docs to read first
 (always CLAUDE.md and docs/STATUS.md), what's out of scope, and how to check
 it's done. Put it in a code block so Leo can copy it on his phone.
 
 ## Keeping the playbook current (both ways)
-- **Learned something that applies to AI development generally**, not just
-  this project (a habit, a gotcha, a tool, a better rule)? Add it to the
-  playbook, not only here, and tell Leo. Rules every session needs go in
-  `shared/ai-dev-rules.md` (keep it short); longer know-how in `reference/`.
-  On the Mac the playbook is `~/.claude/skills/new-app`; in a cloud session,
-  attach `leo-hyde/claude-playbook` (the `add_repo` tool) and clone it next to
-  this project. Commit and push it to main like any project.
+- **Learned something general** (a habit, gotcha, tool or better rule, not
+  just for this project)? Add it to the playbook and tell Leo: every-session
+  rules in `shared/ai-dev-rules.md` (short), longer know-how in `reference/`.
+  It's `~/.claude/skills/new-app` on the Mac; in a cloud session attach
+  `leo-hyde/claude-playbook` (`add_repo`), clone it next to this project, push to main.
 - **The playbook is public**: follow "Public repos" above before every commit
   to it. Write lessons in general terms ("a private repo's site published its
   docs folder"), not with a project's private details.
-- Project-only lessons go in this project's CLAUDE.md or docs.
-- Every project picks up playbook changes at its next session start.
-- **A rule that changes how files should look applies to existing files
-  too**, not only to new work. Apply it in the project where it's made, and
-  add an entry to the playbook's `shared/catch-up.md` for the others.
+- Project-only lessons go in this project's CLAUDE.md or docs. Every project
+  picks up playbook changes at its next session start.
+- **Every change must reach existing projects**, not only new ones. A
+  set-up addition (a hook, a `.gitignore` line, a required file) goes in
+  `shared/setup.txt`, which every session checks. Anything else that changes
+  existing files (a rule about how files look, a template change, removing
+  or renaming set-up) gets an entry in `shared/catch-up.md`. Apply it here too.
 - **If session start prints `CATCH-UP DUE`**, tell Leo, apply it (or offer a
   separate session if it's big), then record it in `docs/playbook-catch-up.md`.
