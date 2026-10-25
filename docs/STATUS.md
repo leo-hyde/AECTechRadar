@@ -10,9 +10,9 @@ history is in `git log`; the decisions are in `docs/decisions.md`.
 
 | | |
 |---|---|
-| Last session | Phone/cloud, 25 Oct 2026 (brought the plan documents up to date with Phase 1) |
-| Ended cleanly? | Yes, everything uploaded to `main` |
-| Work in progress | None. SPEC.md now describes Phase 1 (the method and tool, with AEC as the test case), with one status table for every step. decisions.md now records the Phase 1 decision itself |
+| Last session | Phone/cloud, 25 Oct 2026 (plan documents brought up to date; playbook now keeps them up to date) |
+| Ended cleanly? | Yes, everything uploaded to `main` (this project and the playbook) |
+| Work in progress | None. SPEC.md describes Phase 1 with one status table for every step. The playbook has a new "Keeping the docs true" rule, and the end-of-reply check now blocks if `specs/` changes but SPEC.md doesn't |
 | Next step | Leo answers the 6 decisions at the top of docs/research/1a-foresight-methods.md (each has my recommendation); then steps 1b and 1c, each in a fresh session |
 | Check first | `REPORT.md` in the private repository, to see which sources we still only know from search summaries |
 | Note | The firm, category and analysis entries haven't had the plain-English pass yet. SPEC.md marks prototype step 6 (Leo reviews every entry) as paused, my proposal: Leo to confirm |
@@ -39,10 +39,9 @@ is under way:
 
 ## Next steps
 
-1. Leo answers the 6 decisions in the 1a report.
-2. Research for steps 1b and 1c: one fresh session each.
-3. Step 2: turn the three reports into entries in decisions.md and version 2
-   of the data format; then build steps 3.1 to 3.6.
+The full plan, with every step's status, is in SPEC.md.
+1. Leo answers the 6 decisions in the 1a report (SPEC.md open question 1).
+2. Steps 1b and 1c (research): one fresh session each.
 
 ## Open questions
 

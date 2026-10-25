@@ -11,3 +11,7 @@ done, add a line: id, date, what changed.
   got a plain summary, decisions with recommendations, and a glossary at the
   top. Not yet done: the firm, category and analysis entries (offered as a
   separate session).
+- 2026-10-25-spec-is-the-plan: done 25 Oct 2026. SPEC.md rewritten to
+  describe Phase 1 with a status table for every step; the Phase 1 decision
+  (24 Oct) added to decisions.md, marked as recorded late; STATUS.md's next
+  steps now point at SPEC.md.
