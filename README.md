@@ -5,6 +5,10 @@ architecture (AEC for short). It's built to help advise firms that want to
 move from *using some AI* to *putting AI at the centre of how they work*.
 Every fact links to where it came from.
 
+It's also the test case for a wider project: a method and tool for
+researching any field of technology, with AI doing the first draft and a
+person checking it. The plan is in [SPEC.md](SPEC.md).
+
 **Site:** https://leo-hyde.github.io/AECTechRadar/
 
 > Early prototype. An AI assistant researched the entries, and a person hasn't

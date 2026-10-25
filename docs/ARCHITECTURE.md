@@ -80,6 +80,13 @@ and the raw Markdown.
   light and dark mode: no sideways scrolling, no errors, and the filters
   work. That check script isn't in the repository yet.
 
+## Planned changes
+Phase 1 ([specs/phase-1-research-system.md](../specs/phase-1-research-system.md))
+will change the data format: facts become separate claims with their own
+source and quote, and rings become judgements made per lens (a type of
+user). Nothing here changes until step 2 agrees the new format; this file
+is updated in the same commit as that change.
+
 ## Weak spots
 - The checks only confirm a source link is well formed, not that the page
   still exists.

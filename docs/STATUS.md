@@ -10,12 +10,12 @@ history is in `git log`; the decisions are in `docs/decisions.md`.
 
 | | |
 |---|---|
-| Last session | Mac, 24 Oct 2026 (plain-English rewrite of the docs) |
-| Ended cleanly? | Yes, everything uploaded to `main` (this project and the playbook) |
-| Work in progress | None. The docs are now in plain English (see `docs/playbook-catch-up.md`). The playbook now flags rule changes that older projects still need to apply ("catch-ups") |
-| Next step | Leo answers the 6 decisions at the top of docs/research/1a-foresight-methods.md (each now has my recommendation); then steps 1b and 1c, each in a fresh session |
+| Last session | Phone/cloud, 25 Oct 2026 (brought the plan documents up to date with Phase 1) |
+| Ended cleanly? | Yes, everything uploaded to `main` |
+| Work in progress | None. SPEC.md now describes Phase 1 (the method and tool, with AEC as the test case), with one status table for every step. decisions.md now records the Phase 1 decision itself |
+| Next step | Leo answers the 6 decisions at the top of docs/research/1a-foresight-methods.md (each has my recommendation); then steps 1b and 1c, each in a fresh session |
 | Check first | `REPORT.md` in the private repository, to see which sources we still only know from search summaries |
-| Note | The firm, category and analysis entries haven't had the plain-English pass yet |
+| Note | The firm, category and analysis entries haven't had the plain-English pass yet. SPEC.md marks prototype step 6 (Leo reviews every entry) as paused, my proposal: Leo to confirm |
 
 ## Where we are
 

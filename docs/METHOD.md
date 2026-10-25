@@ -57,6 +57,12 @@ ring that says whether to use it now or watch it.
 - **Coverage.** 17 firms is a sample, not a full list: thousands of AEC
   technology companies exist (McKinsey mapped more than 3,000 in 2023).
 
+Phase 1 is rebuilding this method (see
+[specs/phase-1-research-system.md](../specs/phase-1-research-system.md)).
+The [1a report](research/1a-foresight-methods.md) proposes how to fill the
+gaps above. This file describes the method in use today, until step 2
+agrees the new one.
+
 ## The fields (in each company file)
 | Field | Meaning |
 |---|---|

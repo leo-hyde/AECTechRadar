@@ -3,6 +3,22 @@
 One entry per decision, newest first. If we reverse one, we add a new entry
 and mark the old one "Replaced by <date>".
 
+## 2026-10-24: Build a research method and tool, with AEC as the test case (Phase 1)
+- **What:** the project is no longer only a map of AEC firms. Phase 1
+  builds a method for looking ahead at a field of technology, and a tool
+  that carries it out and scores its own quality. AEC is the test case;
+  Phase 2 redoes the AEC analysis with the finished method. Facts are kept
+  apart from judgements, which are made per lens (a type of user). The plan
+  is in specs/phase-1-research-system.md. (I wrote this entry on 25 Oct;
+  the plan was agreed on 24 Oct but not logged here then.)
+- **Why:** different users (a contractor, an architect, an investor) need
+  different judgements from the same facts, and one ring per company mixes
+  the two. Without a way to measure quality, we can't show the AI research
+  is improving.
+- **Rejected:** carrying on adding firms to the prototype first (more
+  content in a format we expect to change); building before the three
+  research reports (step 1) are done.
+
 ## 2026-10-24: Docs rewritten in plain English, as the playbook asks
 - **What:** I rewrote the project's documents for people (README, SPEC,
   DESIGN, STATUS, ARCHITECTURE, METHOD, these decisions and both specs) in

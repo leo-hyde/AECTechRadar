@@ -1,6 +1,8 @@
 # Phase 1: build the research system (with AEC as the test case)
 
-Status: **draft for Leo's review** (24 Oct 2026). We're working this out
+Status: **agreed as the direction, details still draft** (written 24 Oct
+2026; progress updated 25 Oct). Step 1a and step 3.5 are done; the rest
+hasn't started. SPEC.md has the short version and a status table. We're working this out
 together: where neither of us knows the answer, the plan says so, and the
 research in step 1 finds out.
 
@@ -50,7 +52,7 @@ for us" section that turns the findings into proposed decisions.
 
 | # | Question | What it decides |
 |---|---|---|
-| 1a | **How do professionals look ahead at technology and map a field?** Horizon scanning; technology radars; readiness levels (scales of how mature a technology is); hype cycles (charts of rising and falling excitement) and their critics; Wardley maps (strategy maps of how products mature); scenario planning; structured ways of asking experts, such as Delphi (anonymous rounds of expert opinion); counting patents and research papers; weak signals (early hints of change). What does good look like, and what goes wrong? | The method: what we track (companies, technologies, signals, wider forces), how we rate them, how often we update |
+| 1a | **Done** ([report](../docs/research/1a-foresight-methods.md); 6 decisions wait for Leo). **How do professionals look ahead at technology and map a field?** Horizon scanning; technology radars; readiness levels (scales of how mature a technology is); hype cycles (charts of rising and falling excitement) and their critics; Wardley maps (strategy maps of how products mature); scenario planning; structured ways of asking experts, such as Delphi (anonymous rounds of expert opinion); counting patents and research papers; weak signals (early hints of change). What does good look like, and what goes wrong? | The method: what we track (companies, technologies, signals, wider forces), how we rate them, how often we update |
 | 1b | **How can AI do research like this reliably?** How "deep research" AI tools work (AI that runs many searches and writes a report); how they fail (invented sources, out-of-date facts, overconfidence); how to check their claims; how research teams measure the quality of AI research; knowledge graphs (data stored as linked facts); keeping a person involved at the key points | The tool: its stages, how claims are checked, the gold set, and what not to automate |
 | 1c | **Who uses this kind of analysis, and what do they need?** Types of organisation (contractors, consultancies, clients who own buildings, investors, governments, technology suppliers), their aims, the decisions they're making, and how they like to receive research | How lenses work, and what the site must answer for each type of user |
 
@@ -66,7 +68,7 @@ agreed.
 | 3.2 | Lenses: 2–3 example users (with no real names), and judgements for each | A lens switcher on the site: the rings change with the user |
 | 3.3 | The research process, version 1: a series of Claude skills (saved instructions), each a stage: scope → scan → pull out claims → check them → combine → review. Each stage writes files | A process that leaves a record of every step, replacing `/research-firm` |
 | 3.4 | Measuring quality: Leo checks about 30 claims (the gold set); a script scores any research run against them | A scorecard page: accuracy, whether sources back the claims, and how current they are |
-| 3.5 | Source capture: a GitHub Action (a job that runs on GitHub's computers, which can open any website) saves the text of each cited page, so we can check claims against what the page actually said | "Source archived on <date>" next to each claim |
+| 3.5 | **Done early** ([spec](source-capture.md)). Source capture: a GitHub Action (a job that runs on GitHub's computers, which can open any website) saves the text of each cited page, so we can check claims against what the page actually said | "Source archived on <date>" next to each claim |
 | 3.6 | The site, version 2: a lens view, evidence for each claim, a visual radar, signals | The tool Leo would show a client |
 
 ## Phase 2 (later)
@@ -80,8 +82,8 @@ content beyond what testing needs.
 
 ## Known limits (say these out loud)
 - **Cloud sessions can't open most web pages**, only search summaries. Real
-  checking needs the full text of each page. A GitHub Action (step 3.5) or a
-  session on the Mac can fetch pages.
+  checking needs the full text of each page. Source capture (step 3.5) now
+  saves most cited pages in the private repository; some sites block it.
 - **This kind of research is expensive.** Each report in step 1 is a long
   task with many searches: run each one in its own fresh session.
 - **The gold set needs Leo's time**: about an hour for about 30 claims.
